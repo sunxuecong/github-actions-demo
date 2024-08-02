@@ -16,7 +16,7 @@ jobs:
         token: ${{ secrets.ACCESS_TOKEN }}
         commit-message: Deploying to gh-pages from @ ${{ github.sha }} 🚀
         # 指定仓库
-        repository-name: sunxuecong/sain-notes
+        repository-name: sunxuecong/github-actions-demo
         # GitHub Pages 读取的分支
         branch: gh-pages
         # 静态文件所在目录
