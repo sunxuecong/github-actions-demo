@@ -9,7 +9,7 @@ const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
 export default defineConfig({
   outDir: '../dist',
-  base: '/sbin-none-blog',
+  base: '/github-actions-demo',
 
   lang: 'zh-CN',
   title: '聪聪物语',
