@@ -1,0 +1,53 @@
+{
+  "name": "sain-notes",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.0.0",
+  "description": "Development related notes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunxuecong/sain-notes-sun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maomao1996/sain-notes/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://sunxuecong.github.io/github-actions-demo",
+  "author": "maomao1996 <1714487678@qq.com>",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development vitepress dev docs --port=8732",
+    "build": "npm run daily-notes && vitepress build docs",
+    "build:github": "cross-env APP_BASE_PATH=/sain-notes/ npm run build",
+    "build:docs": "vitepress build docs",
+    "daily-notes": "node ./scripts/daily-notes.js",
+    "preview": "vitepress preview docs --port 8730",
+    "lint": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@femm/prettier": "^1.1.0",
+    "@femm/verify-commit": "^1.0.1",
+    "@mdit-vue/shared": "^0.12.1",
+    "@octokit/rest": "^19.0.13",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.17.15",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.9",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "medium-zoom": "^1.0.8",
+    "prettier": "^2.8.8",
+    "sass": "^1.67.0",
+    "sitemap": "^7.1.1",
+    "vitepress": "1.0.0-beta.7",
+    "vue": "^3.3.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,css,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": "@femm/prettier"
+}
