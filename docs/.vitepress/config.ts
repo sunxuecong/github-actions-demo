@@ -9,7 +9,7 @@ const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
 export default defineConfig({
   outDir: '../dist',
-  base: process.env.APP_BASE_PATH || '/',
+  base: '/sain-notes',
 
   lang: 'zh-CN',
   title: '聪聪物语',
