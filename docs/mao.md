@@ -1,11 +1,11 @@
 ---
 description: Sain Sun：吾志所向，一往无前。一个想躺平的小开发
-layoutClass: m-mao-layout
+layoutClass: sun-sain-layout
 aside: false
 ---
 
 <style>
-.m-mao-layout img {
+.sun-sain-layout img {
   display: inline-block;
   margin-right: 6px;
 }
