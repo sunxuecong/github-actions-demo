@@ -7,6 +7,7 @@ import { head, nav, sidebar, algolia } from './configs'
 
 const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 
+
 export default defineConfig({
   outDir: '../dist',
   base: '/github-actions-demo',
