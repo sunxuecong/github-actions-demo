@@ -1,8 +1,7 @@
 import type { HeadConfig } from 'vitepress'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
-const preUrl = import.meta.env.APP_BASE_PATH || '/' 
-console.log('preUrl',preUrl);
+const preUrl = process.env.APP_BASE_PATH || '/' 
 
 
 export const head: HeadConfig[] = [
