@@ -172,7 +172,7 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '聪聪的站点导航',
+    title: 'Sain Sun的站点导航',
     items: [
       {
         icon: '/logo.png',

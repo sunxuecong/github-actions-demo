@@ -157,7 +157,7 @@ function Brother1(props) {
 }
 
 function Brother2(props) {
-  return <button onClick={() => props.onClick('聪聪')}>传递数据给兄弟组件</button>
+  return <button onClick={() => props.onClick('Sain Sun')}>传递数据给兄弟组件</button>
 }
 
 // 父组件

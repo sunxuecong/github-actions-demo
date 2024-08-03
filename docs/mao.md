@@ -1,5 +1,5 @@
 ---
-description: 聪聪：吾志所向，一往无前。一个想躺平的小开发
+description: Sain Sun：吾志所向，一往无前。一个想躺平的小开发
 layoutClass: m-mao-layout
 aside: false
 ---
@@ -11,7 +11,7 @@ aside: false
 }
 </style>
 
-# 聪聪 <Badge text="maoamo" /> <Badge text="maoamo1996" />
+# Sain Sun <Badge text="maoamo" /> <Badge text="maoamo1996" />
 
 ```sh:no-line-numbers
 吾志所向，一往无前。
@@ -20,9 +20,9 @@ aside: false
 
 **About:**
 
-- [聪聪主页](https://fe-mm.com)
-- [聪聪物语](https://notes.fe-mm.com) 聪聪的成长之路
-- [聪聪的前端知识图谱](https://xmind.fe-mm.com) 用思维导图的方式总结个人所学知识
+- [Sain Sun主页](https://fe-mm.com)
+- [Sain Sun物语](https://notes.fe-mm.com) Sain Sun的成长之路
+- [Sain Sun的前端知识图谱](https://xmind.fe-mm.com) 用思维导图的方式总结个人所学知识
 - [日常笔记](https://github.com/maomao1996/daily-notes) 零零散散啥都记系列（不定期更新）
 - [mmPlayer](https://netease-music.fe-mm.com) 基于 Vue2 的在线音乐播放器
 - [Tampermonkey 油猴脚本库](https://github.com/maomao1996/tampermonkey-scripts) 自己常用的油猴插件

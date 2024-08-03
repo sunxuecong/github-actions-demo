@@ -388,7 +388,7 @@ git log -1 --diff-filter=A --follow --pretty="%ci" "./docs/index.md"
 ## 本地不同分支关联不同的远程仓库
 
 ::: tip
-以聪聪的 [sain-notes](https://github.com/maomao1996/sain-notes) 和 [daily-notes](http://github.com/maomao1996/daily-notes) 仓库为例
+以Sain Sun的 [sain-notes](https://github.com/maomao1996/sain-notes) 和 [daily-notes](http://github.com/maomao1996/daily-notes) 仓库为例
 :::
 
 1. `clone` 仓库 `sain-notes`（默认的 `remote` 为 `origin`）

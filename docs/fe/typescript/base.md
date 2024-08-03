@@ -30,7 +30,7 @@ let isFlag: boolean = true
 
 ```ts
 let name: string = 'maomao'
-name = '聪聪'
+name = 'Sain Sun'
 ```
 
 #### number 数字类型
@@ -58,8 +58,8 @@ let big: bigint = 19961996n
 
 ```ts
 let sym: symbol = Symbol('maomao')
-sym = Symbol('聪聪') // OK
-sym = '聪聪' // Error
+sym = Symbol('Sain Sun') // OK
+sym = 'Sain Sun' // Error
 ```
 
 ### `object`
@@ -98,7 +98,7 @@ create(undefined) // Error
 let value: any = 1
 free = { name: 'maomao' }
 free.log()
-free = '聪聪'
+free = 'Sain Sun'
 ```
 
 :::warning
@@ -317,7 +317,7 @@ const person1: Person = {
 }
 // Error: "gender" 不在类型 "Person" 中
 const person2: Person = {
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 18,
   gender: 'male'
 }
@@ -348,7 +348,7 @@ interface Person {
 
 // Error: "gender" 不在类型 "Person" 中
 const person: Person = {
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 18,
   gender: 'male'
 }
@@ -386,7 +386,7 @@ interface Person {
 
 // Error: 属性 "age" 与索引签名不兼容，不能将类型 "number" 分配给类型 "string"
 const person: Person = {
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 18,
   gender: 'male'
 }
@@ -402,7 +402,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 18,
   gender: 'male'
 }
@@ -422,7 +422,7 @@ interface Person {
 
 const person: Person = {
   id: 1,
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 18,
   gender: 'male'
 }
@@ -443,7 +443,7 @@ interface Person {
 
 // Error: 缺少属性 "id"
 const person: Person = {
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 18,
   gender: 'male'
 }
@@ -700,7 +700,7 @@ const animal: Bird & Fish = {
 **字符串字面量类型**：
 
 ```ts
-type Name = 'maomao' | 'maomao1996' | '聪聪'
+type Name = 'maomao' | 'maomao1996' | 'Sain Sun'
 ```
 
 **数字字面量类型**：
@@ -745,9 +745,9 @@ class Man extends Person {
   }
 }
 
-const instance = new Man('聪聪')
-console.log(instance) // Man { name: '聪聪' }
-instance.sayHello() // 'hello, 聪聪'
+const instance = new Man('Sain Sun')
+console.log(instance) // Man { name: 'Sain Sun' }
+instance.sayHello() // 'hello, Sain Sun'
 ```
 
 #### 访问修饰符
@@ -765,7 +765,7 @@ class Person {
 }
 
 const man = new Person('maomao')
-man.name = '聪聪' // Error: 无法为“name”赋值，因为它是只读属性
+man.name = 'Sain Sun' // Error: 无法为“name”赋值，因为它是只读属性
 ```
 
 - **`public`** 表示公有的访问修饰符，在任何地方都可以访问到
@@ -795,9 +795,9 @@ class Man extends Person {
   }
 }
 
-const instance = new Man('聪聪',  20, '浙江杭州')
+const instance = new Man('Sain Sun',  20, '浙江杭州')
 
-console.log(instance.name)     // 聪聪
+console.log(instance.name)     // Sain Sun
 console.log(instance.age)      // Error: 属性“age”为私有属性，只能在类“Person”中访问
 console.log(instance.address)  // Error: 属性“address”受保护，只能在类“Person”及其子类中访问
 ```
@@ -844,8 +844,8 @@ class Person {
 const instance = new Person('maomao')
 console.log(instance.name) // 'maomao'
 
-instance.name = '聪聪'
-console.log(instance.name) // '聪聪'
+instance.name = 'Sain Sun'
+console.log(instance.name) // 'Sain Sun'
 ```
 
 ::: tip
@@ -864,7 +864,7 @@ class Person {
 }
 
 const instance = new Person('maomao')
-instance.name = '聪聪' // Error: 无法为“name”赋值，因为它是只读属性
+instance.name = 'Sain Sun' // Error: 无法为“name”赋值，因为它是只读属性
 ```
 
 :::
@@ -1134,7 +1134,7 @@ interface Person {
   age: number
 }
 const person: Person = {
-  name: '聪聪',
+  name: 'Sain Sun',
   age: 20
 }
 

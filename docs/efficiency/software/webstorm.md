@@ -1,5 +1,5 @@
 ---
-description: '聪聪的 WebStorm 配置，记录扩展插件、使用小技巧'
+description: 'Sain Sun的 WebStorm 配置，记录扩展插件、使用小技巧'
 ---
 
 # WebStorm 配置

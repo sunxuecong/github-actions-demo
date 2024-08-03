@@ -3,12 +3,12 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 聪聪物语
-  text: Mao Mao 的成长之路
+  name: Sain-notes
+  text: Sain Sun 的成长之路
   tagline: 知识是进步的阶梯，争取每天都有知识点更新
   image:
     src: /logo.png
-    alt: 聪聪物语
+    alt: Sain-notes
   actions:
     - text: 前端物语
       link: /fe/es6/
