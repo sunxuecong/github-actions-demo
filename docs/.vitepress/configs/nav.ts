@@ -105,6 +105,6 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   {
     text: '关于我',
-    link: '/mao'
+    link: '/cong'
   }
 ]
