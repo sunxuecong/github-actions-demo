@@ -6,7 +6,6 @@ import { createMediumZoomProvider } from './composables/useMediumZoom'
 
 import MNavVisitor from './components/MNavVisitor.vue'
 import MDocFooter from './components/MDocFooter.vue'
-import MAsideSponsors from './components/MAsideSponsors.vue'
 import MNavLinks from './components/MNavLinks.vue'
 
 import './styles/index.scss'
@@ -55,7 +54,6 @@ export default {
        */
       'nav-bar-title-after': () => h(MNavVisitor),
       'doc-after': () => h(MDocFooter),
-      'aside-bottom': () => h(MAsideSponsors)
     })
   },
   enhanceApp({ app, router }: EnhanceAppContext) {

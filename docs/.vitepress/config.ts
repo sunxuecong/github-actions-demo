@@ -12,7 +12,8 @@ export default defineConfig({
   base: process.env.APP_BASE_PATH || '/',
 
   lang: 'zh-CN',
-  title: 'Sain',
+  // 网址左上角标题
+  title: 'Sain-notes',
   description: 'Sain Sun的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
   head,
 
@@ -21,28 +22,33 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   /* 主题配置 */
   themeConfig: {
     i18nRouting: false,
-
+    // 左上角标题
+    // siteTitle: 'Hello World',
     logo: '/logo.png',
-
+    // 顶部菜单
     nav,
+
+    // 左侧菜单
     sidebar,
-    /* 右侧大纲配置 */
+
+    // 右侧页面导航（大纲）
     outline: {
       level: 'deep',
-      label: '本页目录'
+      label: '本页目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/maomao1996' }],
+    // 右上角社交信息
+    socialLinks: [{ icon: 'github', link: 'https://github.com/sunxuecong' }],
 
     footer: {
       message: '如有转载或 CV 的请标注本站原文地址',
-      copyright: 'Copyright © 2019-present maomao'
+      copyright: 'Copyright © 2019-present maomao',
     },
 
     darkModeSwitchLabel: '外观',
@@ -54,8 +60,8 @@ export default defineConfig({
 
     docFooter: {
       prev: '上一篇',
-      next: '下一篇'
-    }
+      next: '下一篇',
+    },
   },
 
   /* 生成站点地图 */
@@ -63,7 +69,7 @@ export default defineConfig({
     if (!/[\\/]404\.html$/.test(id))
       links.push({
         url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated
+        lastmod: pageData.lastUpdated,
       })
   },
   buildEnd: async ({ outDir }) => {
@@ -73,5 +79,5 @@ export default defineConfig({
     links.forEach((link) => sitemap.write(link))
     sitemap.end()
     await new Promise((r) => writeStream.on('finish', r))
-  }
+  },
 })

@@ -12,14 +12,11 @@ hero:
   actions:
     - text: 前端物语
       link: /fe/es6/
-    - text: 前端导航
-      link: /nav
+    - text: 源码阅读
+      link: /analysis/react/18
       theme: alt
     - text: 日常笔记
       link: /daily-notes/
-    - text: mmPlayer
-      link: https://netease-music.fe-mm.com
-      theme: alt
 features:
   - icon: 📖
     title: 前端物语
