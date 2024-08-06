@@ -44,8 +44,8 @@ features:
     link: /pit/npm
     linkText: 踩坑记录
   - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
+    title: 风来自很远的地方，去看看也无妨 😄。
+    details: '<small class="bottom-small">Sain Sun</small>'
     link: /cong
 ---
 
