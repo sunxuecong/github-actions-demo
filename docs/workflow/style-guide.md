@@ -36,7 +36,7 @@
 - 常量使用大写命名法。🌰 `const MAX_COUNT = 1996`
 - 变量使用小驼峰式命名法。🌰 `const maxCount = 1996`
 - 方法使用小驼峰式命名法。🌰 `function getUserInfo() {}`
-- 对象 `key` 使用小驼峰式命名法。🌰 `const user = { userName: 'maomao' }`
+- 对象 `key` 使用小驼峰式命名法。🌰 `const user = { userName: 'sain' }`
 - 路由 `path` 使用短横线命名法。🌰 `path: '/user-info'`
 
 #### `CSS` 命名规范
@@ -198,5 +198,5 @@ echo "module.exports = require('@femm/prettier')" > .prettierrc.cjs
 :::
 
 - [VSCode 配置 Prettier 插件](/efficiency/software/vscode#推荐配置)
-- [@femm/prettier | GitHub](https://github.com/maomao1996/femm/tree/main/packages/prettier)
+- [@femm/prettier | GitHub](https://github.com/sunxuecong/femm/tree/main/packages/prettier)
 - [Options | Prettier](https://prettier.io/docs/en/options.html)

@@ -89,9 +89,9 @@ function isUrl(string) {
   }
 }
 
-isUrl('maomao') // false
+isUrl('sain') // false
 
-isUrl('https://github.com/maomao1996') // true
+isUrl('https://github.com/sunxuecong') // true
 isUrl('https://a.b.c') // true
 ```
 

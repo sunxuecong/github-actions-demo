@@ -803,7 +803,7 @@ type Permutation<T, K = T> = [T] extends [never]
 `LengthOfString<S>` 用于计算字符串的长度
 
 ```ts
-type result = LengthOfString<'maomao'>
+type result = LengthOfString<'sain'>
 // 结果：6
 ```
 
@@ -822,16 +822,16 @@ type LengthOfString<S extends string, T extends string[] = []> = S extends `${in
 
 ```ts
 // 第一次调用
-type result1 = LengthOfString<'maomao', []> // T = []
+type result1 = LengthOfString<'sain', []> // T = []
 
 // 第二次调用
-type result2 = LengthOfString<'aomao', ['m']> // T = ['m']
+type result2 = LengthOfString<'aosain', ['m']> // T = ['m']
 
 // 第三次调用
-type result3 = LengthOfString<'omao', ['m', 'a']> // T = ['m', 'a']
+type result3 = LengthOfString<'osain', ['m', 'a']> // T = ['m', 'a']
 
 // 第四次调用
-type result4 = LengthOfString<'mao', ['m', 'a', 'o']> // T = ['m', 'a', 'o']
+type result4 = LengthOfString<'sain', ['m', 'a', 'o']> // T = ['m', 'a', 'o']
 
 // 第五次调用
 type result5 = LengthOfString<'ao', ['m', 'a', 'o', 'm']> // T = ['m', 'a', 'o', 'm']
@@ -866,8 +866,8 @@ type Flatten<T extends any[]> = T extends [infer L, ...infer R]
 `AppendToObject` 可以给对象（接口）追加一个新的属性
 
 ```ts
-type result = AppendToObject<{ id: number }, 'name', 'maomao'>
-// 结果：{ id: number; name: 'maomao' }
+type result = AppendToObject<{ id: number }, 'name', 'sain'>
+// 结果：{ id: number; name: 'sain' }
 ```
 
 **实现**:
@@ -905,7 +905,7 @@ type Absolute<T extends number | string | bigint> = `${T}` extends `-${infer R}`
 `StringToUnion<T>` 可以将字符串转换为联合类型
 
 ```ts
-type result = StringToUnion<'mao'>
+type result = StringToUnion<'sain'>
 // 结果：'m' | 'a' | 'o'
 ```
 

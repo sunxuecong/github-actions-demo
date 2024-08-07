@@ -36,8 +36,9 @@ const handleClick = (data: NavLink) => {
 </script>
 
 <template>
-  <MNavLinks v-if="items.length" title="最近使用" @nav-click="handleClick" :items="items" />
-  <MNavLinks v-for="item in NAV_DATA" v-bind="item" @nav-click="handleClick" />
+<div></div>
+  <!-- <MNavLinks v-if="items.length" title="最近使用" @nav-click="handleClick" :items="items" /> -->
+  <!-- <MNavLinks v-for="item in NAV_DATA" v-bind="item" @nav-click="handleClick" /> -->
 </template>
 
 <style src="./index.scss"></style>

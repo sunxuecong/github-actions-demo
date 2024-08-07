@@ -15,8 +15,6 @@ hero:
     - text: 源码阅读
       link: /analysis/react/18
       theme: alt
-    - text: 日常笔记
-      link: /daily-notes/
 features:
   - icon: 📖
     title: 前端物语

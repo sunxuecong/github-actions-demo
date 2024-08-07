@@ -11,7 +11,7 @@
 - [Git 配置多个 SSH-Key](https://gitee.com/help/articles/4229)
 - 下载相关
   - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
-  - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
+  - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/sunxuecong/daily-notes/issues/7)
 - [commit 常用的 type](/workflow/style-guide#commit-常用的-type)
 
 :::
@@ -307,7 +307,7 @@ jobs:
           # 当需要操作其他仓库时，需要配置个人的 token（根据需要设置）
           token: ${{ secrets.ACCESS_TOKEN }}
           # 指定仓库（根据需要设置）
-          repository-name: maomao1996/sain-notes
+          repository-name: sain1996/sain-notes
           # GitHub Pages 读取的分支
           branch: gh-pages
           # 静态文件所在目录
@@ -388,19 +388,19 @@ git log -1 --diff-filter=A --follow --pretty="%ci" "./docs/index.md"
 ## 本地不同分支关联不同的远程仓库
 
 ::: tip
-以Sain Sun的 [sain-notes](https://github.com/maomao1996/sain-notes) 和 [daily-notes](http://github.com/maomao1996/daily-notes) 仓库为例
+以Sain Sun的 [sain-notes](https://github.com/sunxuecong/sain-notes) 和 [daily-notes](http://github.com/sain1996/daily-notes) 仓库为例
 :::
 
 1. `clone` 仓库 `sain-notes`（默认的 `remote` 为 `origin`）
 
 ```sh
-git clone https://github.com/maomao1996/sain-notes
+git clone https://github.com/sunxuecong/sain-notes
 ```
 
 2. 添加远程仓库 `daily-notes`（`remote` 取名为 `daily-notes`）
 
 ```sh
-git remote add daily-notes http://github.com/maomao1996/daily-notes
+git remote add daily-notes http://github.com/sain1996/daily-notes
 ```
 
 3. 拉取 `daily-notes` 的 `master` 分支到本地（本地分支名为 `notes`）

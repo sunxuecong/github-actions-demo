@@ -16,7 +16,6 @@ export default defineConfig({
   title: 'Sain-notes',
   description: 'Sain Sun的成长之路，包含前端常用知识、源码阅读笔记、各种奇淫技巧、日常提效工具等',
   head,
-
   lastUpdated: true,
   cleanUrls: true,
 
@@ -33,7 +32,6 @@ export default defineConfig({
     logo: '/logo.png',
     // 顶部菜单
     nav,
-
     // 左侧菜单
     sidebar,
 
@@ -49,7 +47,6 @@ export default defineConfig({
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present Sain Sun',
-      
     },
 
     darkModeSwitchLabel: '外观',
@@ -65,20 +62,20 @@ export default defineConfig({
     },
   },
 
-  /* 生成站点地图 */
-  transformHtml: (_, id, { pageData }) => {
-    if (!/[\\/]404\.html$/.test(id))
-      links.push({
-        url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
-        lastmod: pageData.lastUpdated,
-      })
-  },
-  buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
-    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
-    sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
-    sitemap.end()
-    await new Promise((r) => writeStream.on('finish', r))
-  },
+  // /* 生成站点地图 */
+  // transformHtml: (_, id, { pageData }) => {
+  //   if (!/[\\/]404\.html$/.test(id))
+  //     links.push({
+  //       url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+  //       lastmod: pageData.lastUpdated,
+  //     })
+  // },
+  // buildEnd: async ({ outDir }) => {
+  //   const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
+  //   const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+  //   sitemap.pipe(writeStream)
+  //   links.forEach((link) => sitemap.write(link))
+  //   sitemap.end()
+  //   await new Promise((r) => writeStream.on('finish', r))
+  // },
 })
