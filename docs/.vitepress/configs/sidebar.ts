@@ -5,66 +5,75 @@ const sidebarDailyNotes: DefaultTheme.SidebarItem[] =
   fs.readJSONSync('./scripts/daily-notes.json', { throws: false }) || []
 
 export const sidebar: DefaultTheme.Config['sidebar'] = {
-  '/fe/': [
+  '/front/': [
+    {
+      text: "JavaScript 基础知识",
+      collapsed: false,
+      items: [
+        { text: "原型与原型链详解", link: "/front/javascript/prototypeChain" },
+        { text: "JavaScript手写代码汇总", link: "/front/javascript/handwriting" },
+        { text: "前端代码规范", link: "/front/javascript/specification" }
+      ],
+    },
     {
       text: 'JavaScript 基础知识',
       collapsed: false,
       items: [
-        { text: '数据类型', link: '/fe/javascript/types' },
-        { text: '引用类型的拷贝', link: '/fe/javascript/clone' },
-        { text: '类型转换', link: '/fe/javascript/conversions' },
-        { text: '原型和原型链', link: '/fe/javascript/prototype' },
-        { text: '继承', link: '/fe/javascript/inherit' }
+        { text: '数据类型', link: '/front/javascript/types' },
+        { text: '引用类型的拷贝', link: '/front/javascript/clone' },
+        { text: '类型转换', link: '/front/javascript/conversions' },
+        { text: '原型和原型链', link: '/front/javascript/prototype' },
+        { text: '继承', link: '/front/javascript/inherit' }
       ]
     },
     {
       text: 'ES6 常用知识点',
-      link: '/fe/es6/'
+      link: '/front/es6/'
     },
     {
       text: 'TypeScript',
       collapsed: false,
       items: [
-        { text: '基础知识', link: '/fe/typescript/base' },
-        { text: '编译配置', link: '/fe/typescript/tsconfig' },
-        { text: '类型体操', link: '/fe/typescript/challenges' }
+        { text: '基础知识', link: '/front/typescript/base' },
+        { text: '编译配置', link: '/front/typescript/tsconfig' },
+        { text: '类型体操', link: '/front/typescript/challenges' }
       ],
-      link: '/fe/typescript/base'
+      link: '/front/typescript/base'
     },
     {
       text: 'HTML / CSS',
       collapsed: false,
       items: [
-        { text: 'HTML 理论知识点', link: '/fe/html/' },
-        { text: 'CSS 理论知识点', link: '/fe/css/' }
+        { text: 'HTML 理论知识点', link: '/front/html/' },
+        { text: 'CSS 理论知识点', link: '/front/css/' }
       ]
     },
-    { text: ' Webpack', link: '/fe/webpack/' },
+    { text: ' Webpack', link: '/front/webpack/' },
     {
       text: '浏览器与网络',
       collapsed: false,
       items: [
-        { text: '浏览器相关知识点', link: '/fe/browser/' },
-        { text: 'TCP', link: '/fe/network/tcp' },
-        { text: 'HTTP', link: '/fe/network/http' }
+        { text: '浏览器相关知识点', link: '/front/browser/' },
+        { text: 'TCP', link: '/front/network/tcp' },
+        { text: 'HTTP', link: '/front/network/http' }
       ]
     },
     {
       text: 'Node',
       collapsed: false,
-      items: [{ text: 'package.json', link: '/fe/node/pkg' }]
+      items: [{ text: 'package.json', link: '/front/node/pkg' }]
     },
     {
       text: '概念知识点',
       collapsed: false,
       items: [
-        { text: '模块化', link: '/fe/concept/module' },
-        { text: '前端页面渲染方式', link: '/fe/concept/page-rendering' }
+        { text: '模块化', link: '/front/concept/module' },
+        { text: '前端页面渲染方式', link: '/front/concept/page-rendering' }
       ]
     },
     {
       text: '编程题',
-      link: '/fe/coding/'
+      link: '/front/coding/'
     }
   ],
   '/analysis/': [

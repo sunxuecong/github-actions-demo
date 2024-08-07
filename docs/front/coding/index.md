@@ -14,7 +14,7 @@
 :::
 
 ::: details 模拟实现 new 运算符
-<<< @/fe/coding/code/new.js
+<<< @/front/coding/code/new.js
 :::
 
 - [new 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
@@ -28,7 +28,7 @@
 :::
 
 ::: details 模拟实现 instanceof 运算符
-<<< @/fe/coding/code/instanceof.js
+<<< @/front/coding/code/instanceof.js
 :::
 
 - [instanceof 运算符 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof)<br>
@@ -41,7 +41,7 @@
 :::
 
 ::: details 模拟实现 Object.create()
-<<< @/fe/coding/code/object-create.js
+<<< @/front/coding/code/object-create.js
 :::
 
 [Object.create() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
@@ -51,11 +51,11 @@
 `call()` 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数
 
 ::: details ES6 模拟实现 Function.prototype.call()
-<<< @/fe/coding/code/call.js#es6
+<<< @/front/coding/code/call.js#es6
 :::
 
 ::: details ES5 模拟实现 Function.prototype.call()
-<<< @/fe/coding/code/call.js#es5
+<<< @/front/coding/code/call.js#es5
 :::
 
 - [Function.prototype.call() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
@@ -66,11 +66,11 @@
 `apply()` 方法调用一个具有给定 `this` 值的函数，以及以一个数组（或类数组对象）的形式提供的参数
 
 ::: details ES6 模拟实现 Function.prototype.apply()
-<<< @/fe/coding/code/apply.js#es6
+<<< @/front/coding/code/apply.js#es6
 :::
 
 ::: details ES5 模拟实现 Function.prototype.apply()
-<<< @/fe/coding/code/apply.js#es5
+<<< @/front/coding/code/apply.js#es5
 :::
 
 - [Function.prototype.apply() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
@@ -81,11 +81,11 @@
 `bind()` 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数供调用时使用。
 
 ::: details ES6 模拟实现 Function.prototype.bind()
-<<< @/fe/coding/code/bind.js#es6
+<<< @/front/coding/code/bind.js#es6
 :::
 
 ::: details ES5 模拟实现 Function.prototype.bind()
-<<< @/fe/coding/code/bind.js#es5
+<<< @/front/coding/code/bind.js#es5
 :::
 
 - [Function.prototype.bind() —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
@@ -105,7 +105,7 @@
 :::
 
 ::: details 实现防抖函数
-<<< @/fe/coding/code/debounce.js
+<<< @/front/coding/code/debounce.js
 :::
 
 ### throttle 函数节流
@@ -118,5 +118,5 @@
 :::
 
 ::: details 实现节流函数
-<<< @/fe/coding/code/throttle.js
+<<< @/front/coding/code/throttle.js
 :::

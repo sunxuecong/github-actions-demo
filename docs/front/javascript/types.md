@@ -98,7 +98,7 @@ new String(str).length
 
 - 除 **`null`** 外的基本类型都能准确判断
 
-<<< @/fe/javascript/code/typeof.js#primitive
+<<< @/front/javascript/code/typeof.js#primitive
 
 ::: tip 为什么 typeof null === 'object'
 在 `JavaScript` 最初的实现中，`JavaScript` 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 `0`。由于 `null` 代表的是空指针（大多数平台下值为 `0x00`），因此`null` 的类型标签是 `0`，`typeof null` 也因此返回 `"object"` —— [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null)
@@ -106,13 +106,13 @@ new String(str).length
 
 - 除 **`function`** 外的引用类型均返回 `object`
 
-<<< @/fe/javascript/code/typeof.js#object{3}
+<<< @/front/javascript/code/typeof.js#object{3}
 
 ### instanceof
 
 [`instanceof`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 用于检测构造函数的 `prototype` 属性是否存在于实例对象的原型链上
 
-<<< @/fe/javascript/code/instanceof.js
+<<< @/front/javascript/code/instanceof.js
 
 ::: tip instanceof 总结
 
@@ -128,7 +128,7 @@ new String(str).length
 
 实例对象可以通过 [`constructor`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性去访问它的构造函数
 
-<<< @/fe/javascript/code/constructor.js
+<<< @/front/javascript/code/constructor.js
 
 ::: tip constructor 总结
 
@@ -141,14 +141,14 @@ new String(str).length
 
 [`Array.isArray()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray) 用于判断一个值是否是数组 (`Array`)
 
-<<< @/fe/javascript/code/isArray.js
+<<< @/front/javascript/code/isArray.js
 
 ### Object.prototype.toString
 
 - 每个对象都有一个 [`toString()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法，当该对象被表示为一个文本值时，或者一个对象以预期的字符串方式引用时自动调用，默认情况下 `toString()` 方法被每个 `Object` 对象继承。如果此方法在自定义对象中未被覆盖 `toString()` 返回 `"[object type]"` 其中 `type` 是对象的类型
 - 为了每个对象都能通过 `Object.prototype.toString()` 来检测，需要以 `Function.prototype.call()` 或者 `Function.prototype.apply()` 的形式来调用
 
-<<< @/fe/javascript/code/toString.js
+<<< @/front/javascript/code/toString.js
 
 `toString` 方法的在 [`ECMAScript 5`](https://es5.github.io/#x15.2.4.2) 下的大致执行过程
 

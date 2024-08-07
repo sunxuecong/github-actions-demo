@@ -968,12 +968,12 @@ a?.b = c
 
 [ES2020](https://github.com/tc39/proposal-nullish-coalescing) 引入了空值合并运算符，只有运算符左侧的值为 `null` 或 `undefined` 时才会返回右侧的值
 
-<<< @/fe/es6/code/nullish-coalescing.js
+<<< @/front/es6/code/nullish-coalescing.js
 
 ::: tip ?? 和 || 的区别
 
 - **`??` 运算符**只有左侧是 `null` 或 `undefined`才会返回右侧的值
-- **`||` 运算符**只要左侧是 [假值](/fe/javascript/conversions#toboolean) 就会返回右侧的值
+- **`||` 运算符**只要左侧是 [假值](/front/javascript/conversions#toboolean) 就会返回右侧的值
 
 :::
 

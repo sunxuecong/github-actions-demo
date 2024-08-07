@@ -48,7 +48,7 @@
 
 :::
 
-<<< @/fe/javascript/code/ToPrimitive.js
+<<< @/front/javascript/code/ToPrimitive.js
 
 ### ToString
 

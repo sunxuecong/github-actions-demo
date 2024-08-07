@@ -4,22 +4,22 @@ export const nav: DefaultTheme.Config['nav'] = [
   // { text: '导航', link: '/nav', activeMatch: '^/nav' },
   {
     text: '前端物语',
-    link: '/fe/javascript/types',
+    link: '/front/javascript/handwriting',
     // items: [
-    //   { text: 'JavaScript 基础知识', link: '/fe/javascript/types' },
-    //   { text: 'CSS 理论知识点', link: '/fe/css/' },
-    //   { text: 'ES6 常用知识', link: '/fe/es6/' },
+    //   { text: 'JavaScript 基础知识', link: '/front/javascript/types' },
+    //   { text: 'CSS 理论知识点', link: '/front/css/' },
+    //   { text: 'ES6 常用知识', link: '/front/es6/' },
     //   {
     //     items: [
-    //       { text: 'TypeScript 基础知识', link: '/fe/typescript/base' },
-    //       { text: 'TypeScript 类型体操', link: '/fe/typescript/challenges' }
+    //       { text: 'TypeScript 基础知识', link: '/front/typescript/base' },
+    //       { text: 'TypeScript 类型体操', link: '/front/typescript/challenges' }
     //     ]
     //   },
-    //   { text: 'Webpack', link: '/fe/webpack/' },
-    //   { text: '浏览器相关知识', link: '/fe/browser/' },
-    //   { text: '编程题', link: '/fe/coding/' }
+    //   { text: 'Webpack', link: '/front/webpack/' },
+    //   { text: '浏览器相关知识', link: '/front/browser/' },
+    //   { text: '编程题', link: '/front/coding/' }
     // ],
-    activeMatch: '^/fe'
+    activeMatch: '^/front'
   },
   { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
   {

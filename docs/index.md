@@ -11,7 +11,7 @@ hero:
     alt: Sain-notes
   actions:
     - text: 前端物语
-      link: /fe/es6/
+      link: /front/es6/
     - text: 源码阅读
       link: /analysis/react/18
       theme: alt
@@ -21,8 +21,8 @@ features:
   - icon: 📖
     title: 前端物语
     details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: /fe/javascript/types
-    linkText: 前端常用知识
+    link: /front/javascript/types
+    linkText:   
   - icon: 📘
     title: 源码阅读
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识

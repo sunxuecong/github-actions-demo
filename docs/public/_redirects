@@ -2,13 +2,13 @@
 
 # https://notes-7w2tusrb9-fe-mm.vercel.app
 
-/interview/base/:path                       /fe/javascript/:path    301
-/interview/html-css/html.html               /fe/html/               301
-/interview/es6/                             /fe/es6/                301
-/interview/concept/:path                    /fe/concept/:path       301
-/interview/network/:path                    /fe/network/tcp         301
-/interview/browser/                         /fe/browser/            301
-/interview/coding/                          /fe/coding/             301
+/interview/base/:path                       /front/javascript/:path    301
+/interview/html-css/html.html               /front/html/               301
+/interview/es6/                             /front/es6/                301
+/interview/concept/:path                    /front/concept/:path       301
+/interview/network/:path                    /front/network/tcp         301
+/interview/browser/                         /front/browser/            301
+/interview/coding/                          /front/coding/             301
 
 /source-code/:path                          /analysis/utils/:path  301
 

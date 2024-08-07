@@ -54,7 +54,7 @@ tsc --init
 
 > 这里列举的是通过 `tsc --init` 生成的默认配置（`tsc` 的版本为 `5.0.3`）
 
-<<< @/fe/typescript/code/tsconfig.jsonc{2,10,24,46,77,98,102 json}
+<<< @/front/typescript/code/tsconfig.jsonc{2,10,24,46,77,98,102 json}
 
 #### `files`
 
