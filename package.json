@@ -9,12 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/sunxuecong/sain-notes-sun.git"
   },
-  "bugs": {
-    "url": "https://github.com/maomao1996/sain-notes/issues"
-  },
   "license": "MIT",
   "homepage": "https://sunxuecong.github.io/github-actions-demo",
-  "author": "maomao1996 <1714487678@qq.com>",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vitepress dev docs --port=8732",
     "build": "npm run daily-notes && vitepress build docs",
@@ -26,8 +22,6 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@femm/prettier": "^1.1.0",
-    "@femm/verify-commit": "^1.0.1",
     "@mdit-vue/shared": "^0.12.1",
     "@octokit/rest": "^19.0.13",
     "@types/fs-extra": "^11.0.1",
@@ -43,11 +37,5 @@
     "sitemap": "^7.1.1",
     "vitepress": "1.0.1",
     "vue": "^3.3.4"
-  },
-  "lint-staged": {
-    "*.{js,ts,css,md,json}": [
-      "prettier --write"
-    ]
-  },
-  "prettier": "@femm/prettier"
+  }
 }
