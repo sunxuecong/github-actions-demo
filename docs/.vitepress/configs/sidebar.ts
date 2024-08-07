@@ -93,10 +93,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/workflow/': [
     {
-      text: '编程规范',
-      link: '/workflow/style-guide'
-    },
-    {
       text: '常用工具/方法',
       collapsed: false,
       items: [
