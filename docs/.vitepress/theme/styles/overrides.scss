@@ -103,3 +103,17 @@ table {
 .dark .vp-doc .custom-block a {
   transition: color 0.25s;
 }
+
+
+@media (max-width: 800px) {
+  .image-src {
+    max-width:80%;
+    max-height:88%;
+  }
+}
+@media (min-width: 1080px) {
+  .image-src {
+    max-width:370px;
+    max-height:390px;
+  }
+ }
