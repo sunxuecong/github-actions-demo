@@ -104,11 +104,14 @@ table {
   transition: color 0.25s;
 }
 
+.m-home-layout .image-bg {
+  background:none !important;
+}
   
 @media (max-width: 800px) {
   .image-src {
-    max-width:80% !important;
-    max-height:80% !important;
+    max-width:79% !important;
+    max-height:79% !important;
   }
 }
 @media (min-width: 1080px) {
