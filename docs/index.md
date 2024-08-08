@@ -5,7 +5,7 @@ layoutClass: 'm-home-layout'
 hero:
   name: Sain-notes
   text: 专注 & 洞察 & 分享
-  tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
+  tagline: 记录分享个人碎片化、体系化的技术知识内容。
   image:
     src: /logo.svg
     alt: Sain-notes
@@ -21,17 +21,17 @@ hero:
 features:
   - icon: 📖
     title: 前端物语
-    details: 整理前端常用知识点
+    details: 整理前端常用知识点，方便查漏补缺。
     link: /front/javascript/types
     linkText: 开始阅读
   - icon: 📘
-    title: 开发FAQ
-    details: 收集和整理开发中常见问题。
+    title: 备忘录
+    details: 将日常工作中遇到的问题做一份备忘录，方便查阅。
     link: /analysis/utils/only-allow
     linkText: 查看问题
   - icon: 💡
     title: 技术视野
-    details: 跟随前沿技术，深度和广度学习。
+    details: 跟随前沿技术，洞察技术行业趋势，保持竞争力。
     link: /workflow/utils/library
     linkText: 欢迎 Follow
   - icon:  🔧
@@ -41,7 +41,7 @@ features:
     linkText: 提高效率
   - icon: 🐞
     title: 踩坑记录
-    details: 那些年我们踩过的坑
+    details: 记录一下踩过的坑，总有一些让你意想不到的问题。
     link: /pit/npm
     linkText: 踩坑记录
   - icon:  🎉
@@ -51,26 +51,10 @@ features:
 ---
 
 <style>
-/*爱的魔力转圈圈*/
-.m-home-layout .image-src:hover {
-
-}
 .m-home-layout .image-bg {
   background:none
 }
 
- @media (max-width: 800px) {
-  .m-home-layout .image-src {
-    max-width:80%;
-    max-height:88%;
-  }
-}
-@media (min-width: 1080px) {
-  .m-home-layout .image-src {
-    max-width:370px;
-    max-height:390px;
-  }
- }
 
 .m-home-layout .details small {
   opacity: 0.8;

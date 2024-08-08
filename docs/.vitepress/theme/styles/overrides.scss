@@ -104,16 +104,16 @@ table {
   transition: color 0.25s;
 }
 
-
+  
 @media (max-width: 800px) {
   .image-src {
-    max-width:78%;
+    max-width:78% !important;
     max-height:78%;
   }
 }
 @media (min-width: 1080px) {
   .image-src {
-    max-width:370px;
+    max-width:370px !important;
     max-height:390px;
   }
  }
