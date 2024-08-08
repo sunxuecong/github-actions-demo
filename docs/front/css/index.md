@@ -427,7 +427,7 @@ flex: 2 2 10%;
 - 应用范围
   - `<link>` 标签用于链接各种类型的外部资源（这里只举三个 🌰）
     - 加载 `CSS`：`<link rel="stylesheet" href="/index.css" />`
-    - 加载网站图标（`favicon`）：`<link rel="icon" href="favicon.ico" />`
+    - 加载网站图标（`favicon`）：`<link rel="icon" href="favicon.svg" />`
     - `DNS` 预解析：`<link rel="dns-prefetch" href="https://notes.fe-mm.com">`
   - `@import` 只能用于引入 `CSS`
 - 加载顺序

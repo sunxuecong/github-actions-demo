@@ -35,7 +35,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://devtool.tech'
       },
       {
-        icon: 'https://tool.lu/favicon.ico',
+        icon: 'https://tool.lu/favicon.svg',
         title: '在线工具',
         desc: '开发人员的工具箱',
         link: 'https://tool.lu'
@@ -165,7 +165,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         badge: '绘画',
-        icon: 'https://stablediffusionweb.com/favicon.ico',
+        icon: 'https://stablediffusionweb.com/favicon.svg',
         title: 'Stable Diffusion',
         link: 'https://stablediffusionweb.com'
       }
@@ -175,7 +175,7 @@ export const NAV_DATA: NavData[] = [
     title: 'Sain Sun的站点导航',
     items: [
       {
-        icon: '/logo.png',
+        icon: '/logo.svg',
         title: '前端思维导图',
         desc: '用思维导图的方式总结个人所学知识',
         link: 'https://mindmap.fe-mm.com'
@@ -192,7 +192,7 @@ export const NAV_DATA: NavData[] = [
     title: 'React 生态',
     items: [
       {
-        icon: 'https://zh-hans.reactjs.org/favicon.ico',
+        icon: 'https://zh-hans.reactjs.org/favicon.svg',
         title: 'React',
         desc: '用于构建用户界面的 JavaScript 库',
         link: 'https://zh-hans.reactjs.org'
@@ -246,7 +246,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://docs.pmnd.rs/zustand/getting-started/introduction'
       },
       {
-        icon: 'https://valtio.pmnd.rs/favicon.ico',
+        icon: 'https://valtio.pmnd.rs/favicon.svg',
         title: 'Valtio',
         desc: 'makes proxy-state simple for React and Vanilla',
         link: 'https://valtio.pmnd.rs'
@@ -329,7 +329,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://antdv.com'
       },
       {
-        icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+        icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.svg',
         title: 'Vant',
         desc: '轻量、可定制的移动端 Vue 组件库',
         link: 'https://vant-ui.github.io/vant'
@@ -457,7 +457,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://uniapp.dcloud.net.cn'
       },
       {
-        icon: 'https://mpxjs.cn/favicon.ico',
+        icon: 'https://mpxjs.cn/favicon.svg',
         title: 'Mpx',
         desc: '增强型跨端小程序框架',
         link: 'https://mpxjs.cn'
@@ -521,13 +521,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://d3js.org'
       },
       {
-        icon: 'https://www.chartjs.org/favicon.ico',
+        icon: 'https://www.chartjs.org/favicon.svg',
         title: 'Chart.js',
         desc: '一个简单而灵活的 JavaScript 图表库',
         link: 'https://www.chartjs.org'
       },
       {
-        icon: 'https://threejs.org/files/favicon.ico',
+        icon: 'https://threejs.org/files/favicon.svg',
         // icon: 'https://threejs.org/files/favicon_white.ico',
         title: 'Three.js',
         desc: 'JavaScript 3d 库',
@@ -645,7 +645,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://developer.mozilla.org/zh-CN'
       },
       {
-        icon: 'https://static.runoob.com/images/favicon.ico',
+        icon: 'https://static.runoob.com/images/favicon.svg',
         title: '菜鸟教程',
         desc: '学的不仅是技术，更是梦想！',
         link: 'https://www.runoob.com'
@@ -702,7 +702,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         title: '博客园',
-        // icon: 'https://common.cnblogs.com/favicon.ico',
+        // icon: 'https://common.cnblogs.com/favicon.svg',
         icon: '/icons/cnblogs.svg',
         desc: '博客园是一个面向开发者的知识分享社区',
         link: 'https://www.cnblogs.com'
@@ -725,7 +725,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://momoyu.cc'
       },
       {
-        icon: 'https://v.qq.com/favicon.ico',
+        icon: 'https://v.qq.com/favicon.svg',
         title: '腾讯视频',
         // desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
         link: 'https://v.qq.com'

@@ -81,7 +81,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '^/daily-notes|pit'
   },
   {
-    text: '提效工具',
+    text: '工具软件',
     items: [
       {
         text: '软件推荐与配置',

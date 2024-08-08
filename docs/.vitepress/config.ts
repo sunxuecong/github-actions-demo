@@ -29,7 +29,7 @@ export default defineConfig({
     i18nRouting: false,
     // 左上角标题
     // siteTitle: 'Hello World',
-    logo: '/logo.png',
+    logo: '/logo.svg',
     // 顶部菜单
     nav,
     // 左侧菜单

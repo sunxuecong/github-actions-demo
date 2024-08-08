@@ -7,7 +7,7 @@ hero:
   text: Sain Sun 的成长之路
   tagline: 知识是进步的阶梯，争取每天都有知识点更新
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: Sain-notes
   actions:
     - text: 前端物语
@@ -50,9 +50,24 @@ features:
 <style>
 /*爱的魔力转圈圈*/
 .m-home-layout .image-src:hover {
-  transform: translate(-50%, -50%) rotate(666turn);
-  transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
+
 }
+.m-home-layout .image-bg {
+  background:none
+}3
+
+ @media (max-width: 800px) {
+  .m-home-layout .image-src {
+    max-width:80%;
+    max-height:88%;
+  }
+}
+@media (min-width: 1080px) {
+  .m-home-layout .image-src {
+    max-width:370px;
+    max-height:390px;
+  }
+ }
 
 .m-home-layout .details small {
   opacity: 0.8;

@@ -52,7 +52,7 @@
 ```sh
 .
 ├── .vscode                           # VSCode 配置文件
-├── public                            # 网站资源文件（favicon.ico index.html 等）
+├── public                            # 网站资源文件（favicon.svg index.html 等）
 ├── scripts                           # 脚本相关
 ├── src
 │   ├── apis                          # api 接口

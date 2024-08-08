@@ -12,7 +12,7 @@
   "license": "MIT",
   "homepage": "https://sunxuecong.github.io/github-actions-demo",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vitepress dev docs --port=8732",
+    "dev": "cross-env NODE_ENV=development vitepress dev docs --port=8732 --host",
     "build": "vitepress build docs",
     "build:github": "cross-env APP_BASE_PATH=/github-actions-demo/ npm run build",
     "build:docs": "vitepress build docs",
