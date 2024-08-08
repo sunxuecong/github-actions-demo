@@ -110,12 +110,12 @@ table {
 
 @media (max-width: 800px) {
   .image-src {
-    max-width:75% !important;
-    max-height:75% !important;
+    max-width:76% !important;
+    max-height:76% !important;
   }
-  // .main {
-  //   margin-top: 100px !important;
-  // }
+  .main {
+    margin-top: 5px !important;
+  }
 }
 @media (min-width: 1080px) {
   .image-src {
