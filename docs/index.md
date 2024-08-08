@@ -21,32 +21,32 @@ hero:
 features:
   - icon: 📖
     title: 前端物语
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
+    details: 整理前端常用知识点
     link: /front/javascript/types
-    linkText:   
+    linkText: 开始阅读
   - icon: 📘
-    title: 源码阅读
-    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
+    title: 开发FAQ
+    details: 收集和整理开发中常见问题。
     link: /analysis/utils/only-allow
-    linkText: 源码阅读
+    linkText: 查看问题
   - icon: 💡
-    title: Workflow
-    details: 在工作中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />配合 CV 大法来更好的摸鱼
+    title: 技术视野
+    details: 跟随前沿技术，深度和广度学习。
     link: /workflow/utils/library
-    linkText: 常用工具库
-  - icon: 🧰
-    title: 提效工具
-    details: 工欲善其事，必先利其器<br />记录开发和日常使用中所用到的软件、插件、扩展等
+    linkText: 欢迎 Follow
+  - icon:  🔧
+    title: 编程工具
+    details: 归纳一些编程相关工具与网站，提高效率。
     link: /efficiency/online-tools
-    linkText: 提效工具
+    linkText: 提高效率
   - icon: 🐞
     title: 踩坑记录
-    details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
+    details: 那些年我们踩过的坑
     link: /pit/npm
     linkText: 踩坑记录
-  - icon: 💯
+  - icon:  🎉
     title: 风来自很远的地方，去看看也无妨 😄。
-    details: '<small class="bottom-small">Sain Sun</small>'
+    details: '<small class="bottom-small">-- Sain Sun</small>'
     link: /cong
 ---
 
