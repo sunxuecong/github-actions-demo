@@ -4,15 +4,18 @@ layoutClass: 'm-home-layout'
 
 hero:
   name: Sain-notes
-  text: Sain Sun 的成长之路
-  tagline: 知识是进步的阶梯，争取每天都有知识点更新
+  text: 专注 & 洞察 & 分享
+  tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
   image:
     src: /logo.svg
     alt: Sain-notes
   actions:
-    - text: 前端物语
+    - text: 快速开始
       link: /front/es6/
-    - text: 源码阅读
+    - text: 在Github查看
+      link: /analysis/react/18
+      theme: alt
+    - text: 听点音乐
       link: /analysis/react/18
       theme: alt
 features:
