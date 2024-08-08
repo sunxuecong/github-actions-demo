@@ -54,7 +54,7 @@ features:
 }
 .m-home-layout .image-bg {
   background:none
-}3
+}
 
  @media (max-width: 800px) {
   .m-home-layout .image-src {

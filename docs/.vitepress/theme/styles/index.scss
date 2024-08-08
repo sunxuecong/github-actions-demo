@@ -2,3 +2,17 @@
 @import './vars.scss';
 @import './overrides.scss';
 @import './medium-zoom.scss';
+
+
+@media (max-width: 800px) {
+  .image-src {
+    max-width:80% !important;
+    max-height:88% important;
+  }
+}
+@media (min-width: 1080px) {
+  .image-src {
+    max-width:370px !important;
+    max-height:390px !important;
+  }
+ }
