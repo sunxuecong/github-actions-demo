@@ -107,11 +107,14 @@ table {
 .m-home-layout .image-bg {
   background:none !important;
 }
-  
+
 @media (max-width: 800px) {
   .image-src {
     max-width:76% !important;
     max-height:76% !important;
+  }
+  .main {
+    margin-top: 10px !important;
   }
 }
 @media (min-width: 1080px) {
