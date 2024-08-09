@@ -1,5 +1,4 @@
 import type { DefaultTheme } from 'vitepress'
-import fs from 'fs-extra'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = {
   '/front/': [
@@ -172,6 +171,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'PC 踩坑记录', link: '/pit/pc' },
         { text: 'H5 踩坑记录', link: '/pit/h5' },
         { text: '微信开发踩坑记录', link: '/pit/wechat' }
+      ]
+    }
+  ],
+  '/music/': [
+    {
+      text: '音乐台',
+      // collapsed: false,
+      items: [
+        { text: '小行迹', link: '/music/song' },
+        { text: '嘉宾', link: '/music/guest' },
       ]
     }
   ],

@@ -35,6 +35,14 @@
     "sass": "^1.67.0",
     "sitemap": "^7.1.1",
     "vitepress": "1.0.1",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "lodash-es": "^4.17.15",
+    "element-ui": "^2.10.1",
+    "@better-scroll/core": "^2.0.0-alpha.20",
+    "@better-scroll/mouse-wheel": "^2.0.0-alpha.20",
+    "@better-scroll/scroll-bar": "^2.0.0-alpha.20",
+    "axios": "^0.21.1",
+    "better-scroll": "^1.15.2",
+    "less": "^4.2.0"
   }
 }

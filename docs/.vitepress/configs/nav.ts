@@ -21,6 +21,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     // ],
     activeMatch: '^/front'
   },
+  
   { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
   {
     text: 'Workflow',
@@ -66,7 +67,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   {
     text: '笔记',
-    items: [
+    items: [  
       {
         text: '踩坑记录',
         items: [
@@ -98,6 +99,11 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
     ],
     activeMatch: '^/efficiency'
+  },
+  {
+    text: '音乐台',
+    link: '/music/song',
+    activeMatch: '^/music'
   },
   {
     text: '关于我',
