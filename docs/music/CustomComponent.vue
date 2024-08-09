@@ -615,6 +615,7 @@ export default {
       .right {
         width: 0px;
         height: 440px;
+        padding-left: 0px !important;
         .name-wrap {
           display: none;          
         }
