@@ -22,12 +22,8 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
-import { prefixStyle } from "./utils/dom.js"
-import { toCurrentRem } from "./utils/rem.js"
-
-const transform = prefixStyle("transform")
-
+<script>
+import { toCurrentRem,init } from "./utils/rem.js"
 export default {
   name: "ProgressBar",
   props: {
@@ -48,11 +44,45 @@ export default {
     this.touch = {}
   },
   mounted() {
-    if (this.percent > 0) {
-      this.setProgressOffset(this.percent)
-    }
+    init()
+    this.$nextTick(()=>{
+      if (this.percent > 0) {
+        this.setProgressOffset(this.percent)
+      }
+    })
   },
   methods: {
+    prefixStyle(style){
+      let elementStyle = document.createElement('div').style
+
+      let vendor = () => {
+        let transformNames = {
+          webkit: 'webkitTransform',
+          Moz: 'MozTransform',
+          O: 'OTransform',
+          ms: 'msTransform',
+          standard: 'transform'
+        }
+
+        for (let key in transformNames) {
+          if (elementStyle[transformNames[key]] !== undefined) {
+            return key
+          }
+        }
+
+        return false
+      }
+
+        if (vendor() === false) {
+          return false
+        }
+
+        if (vendor() === 'standard') {
+          return style
+        }
+
+        return vendor() + style.charAt(0).toUpperCase() + style.substr(1)
+    },
     progressClick(e) {
       if (!this.disabled) {
         const rect = this.$refs.progressBar.getBoundingClientRect()
@@ -77,6 +107,9 @@ export default {
       this.$emit("percentChange", this._getPercent())
     },
     _offset(offsetWidth) {
+
+
+      const transform = this.prefixStyle("transform")
       const offsetRem = toCurrentRem(offsetWidth)
       this.$refs.progress.style.width = `${offsetRem}`
       this.$refs.progressBtn.style[transform] = `translate3d(${offsetRem},0,0)`

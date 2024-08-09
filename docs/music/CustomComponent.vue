@@ -26,10 +26,10 @@
             {{ formatTime(currentTime) }} /
             {{ formatTime(currentSong.duration / 1000) }}
           </div>
-          <!-- <ProgressBar
+          <ProgressBar
             :percent="playedPercent"
             @percentChange="onProgressChange"
-          /> -->
+          />
         </div>
         <div class="control">
           <img :src="share" alt="" />
@@ -110,7 +110,7 @@ function isDef(v) {
 }
 import Scroller from "./Scroller.vue";
 import empty from "./empty.vue";
-// import ProgressBar from "./ProgressBar.vue";
+import ProgressBar from "./ProgressBar.vue";
 import { getLyric } from "./api/song.js";
 // import { Button } from 'element-ui';
 const WHEEL_TYPE = "wheel";
@@ -120,7 +120,7 @@ const AUTO_SCROLL_RECOVER_TIME = 1000;
 
 export default {
   name: "CustomComponent",
-  components: { empty, Scroller },
+  components: { empty, Scroller ,ProgressBar},
   props: {
     currentSong:{
       type:Object,

@@ -16,7 +16,7 @@ export function getData(el, name, val) {
 
 let elementStyle = document.createElement('div').style
 
-let vendor = ( () => {
+let vendor = () => {
 	let transformNames = {
 		webkit: 'webkitTransform',
 		Moz: 'MozTransform',
@@ -32,18 +32,18 @@ let vendor = ( () => {
 	}
 
 	return false
-})()
+}
 
 export function prefixStyle(style) {
-	if (vendor === false) {
+	if (vendor() === false) {
 		return false
 	}
 
-	if (vendor === 'standard') {
+	if (vendor() === 'standard') {
 		return style
 	}
 
-	return vendor + style.charAt(0).toUpperCase() + style.substr(1)
+	return vendor() + style.charAt(0).toUpperCase() + style.substr(1)
 }
 
 export function hasParent(dom, parentDom) {
