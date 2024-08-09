@@ -603,7 +603,7 @@ export default {
         padding: 0;
         justify-content: center;
         .left-top {
-          padding: 80px 0 0 0;
+          padding: 70px 0 0 0;
           height: 380px;
           .img-outer-border {
             position: absolute;
