@@ -13,10 +13,10 @@ hero:
     - text: 快速开始
       link: /front/es6/
     - text: 在Github查看
-      link: /analysis/react/18
+      link: https://github.com/sunxuecong
       theme: alt
     - text: 听点音乐
-      link: /analysis/react/18
+      link: /music/song
       theme: alt
 features:
   - icon: 📖
