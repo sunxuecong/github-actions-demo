@@ -26,10 +26,10 @@
             {{ formatTime(currentTime) }} /
             {{ formatTime(currentSong.duration / 1000) }}
           </div>
-          <ProgressBar
+          <!-- <ProgressBar
             :percent="playedPercent"
             @percentChange="onProgressChange"
-          />
+          /> -->
         </div>
         <div class="control">
           <img :src="share" alt="" />
@@ -66,9 +66,6 @@
             <div class="value">{{ currentSong.artistsText }}</div>
           </div>
         </div>
-
-
-
 
         <empty v-if="nolyric">还没有歌词哦~</empty>
         <Scroller
@@ -113,7 +110,7 @@ function isDef(v) {
 }
 import Scroller from "./Scroller.vue";
 import empty from "./empty.vue";
-import ProgressBar from "./ProgressBar.vue";
+// import ProgressBar from "./ProgressBar.vue";
 import { getLyric } from "./api/song.js";
 // import { Button } from 'element-ui';
 const WHEEL_TYPE = "wheel";
@@ -123,7 +120,7 @@ const AUTO_SCROLL_RECOVER_TIME = 1000;
 
 export default {
   name: "CustomComponent",
-  components: { ProgressBar, empty, Scroller },
+  components: { empty, Scroller },
   props: {
     currentSong:{
       type:Object,
@@ -170,8 +167,11 @@ export default {
   },
   mounted() {
     this.updateSong();
-    this.$nextTick(() => {
+    setTimeout(() => {
       this.scrollToActiveLyric();
+      
+    }, 3000);
+    this.$nextTick(() => {
     });
   },
   watch: {
@@ -306,6 +306,8 @@ export default {
     scrollToActiveLyric() {
       if (this.activeLyricIndex !== -1) {
         const { scroller, lyric } = this.$refs;
+        console.log('scroller',scroller);
+        
         if (lyric && lyric[this.activeLyricIndex]) {
           scroller
             .getScroller()

@@ -8,11 +8,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import BScroll from "@better-scroll/core"
-import ScrollBar from "@better-scroll/scroll-bar"
-import MouseWheel from "@better-scroll/mouse-wheel"
-BScroll.use(ScrollBar)
-BScroll.use(MouseWheel)
+import BScroll from 'better-scroll'
 
 const defaultOptions = {
   mouseWheel: true,
