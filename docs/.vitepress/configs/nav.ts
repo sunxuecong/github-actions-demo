@@ -39,7 +39,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'HTML 语法', link: '/workflow/html/tricks' },
           { text: 'CSS 语法', link: '/workflow/css/spec' },
-          { text: 'CSS 奇淫技巧', link: '/workflow/css/tricks' },
+          { text: 'CSS 技巧', link: '/workflow/css/tricks' },
           { text: 'Sass 常用技巧', link: '/workflow/sass/' }
         ]
       },

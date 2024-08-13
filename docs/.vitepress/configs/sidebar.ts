@@ -112,9 +112,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'HTML / CSS 相关',
       collapsed: false,
       items: [
-        { text: 'HTML 奇淫技巧', link: '/workflow/html/tricks' },
+        { text: 'HTML 技巧', link: '/workflow/html/tricks' },
         { text: 'CSS 语法', link: '/workflow/css/spec' },
-        { text: 'CSS 奇淫技巧', link: '/workflow/css/tricks' },
+        { text: 'CSS 技巧', link: '/workflow/css/tricks' },
         { text: 'Sass 常用技巧', link: '/workflow/sass/' }
       ]
     },
