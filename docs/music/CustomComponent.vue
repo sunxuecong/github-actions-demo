@@ -116,7 +116,7 @@ import { getLyric } from "./api/song.js";
 const WHEEL_TYPE = "wheel";
 const SCROLL_TYPE = "scroll";
 // 恢复自动滚动的定时器时间
-const AUTO_SCROLL_RECOVER_TIME = 1000;
+const AUTO_SCROLL_RECOVER_TIME = 500;
 
 export default {
   name: "CustomComponent",
@@ -170,7 +170,7 @@ export default {
     setTimeout(() => {
       this.scrollToActiveLyric();
       
-    }, 3000);
+    }, 0);
     this.$nextTick(() => {
     });
   },
@@ -206,6 +206,9 @@ export default {
       const right = document.querySelector(".right");
       left.style.width = "0px";
       right.style.width = "99vw";
+      this.$nextTick(()=>{
+        this.scrollToActiveLyric()
+      })
       console.log("left: ", left);
     },
     showCover() {
@@ -222,7 +225,7 @@ export default {
       return this.activeLyricIndex === index ? "active" : "";
     },
     onInitScroller(scoller) {
-      console.log("走了 init");
+      console.log("走了 onInitScroller");
       const onScrollStart = (type) => {
         this.clearTimer(type);
         this.lyricScrolling[type] = true;
@@ -307,7 +310,6 @@ export default {
       if (this.activeLyricIndex !== -1) {
         const { scroller, lyric } = this.$refs;
         console.log('scroller',scroller);
-        
         if (lyric && lyric[this.activeLyricIndex]) {
           scroller
             .getScroller()
