@@ -155,7 +155,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Windows 平台', link: '/efficiency/software/windows' },
         { text: '浏览器设置与扩展', link: '/efficiency/software/browser' },
         { text: 'Visual Studio Code 配置', link: '/efficiency/software/vscode' },
-        { text: 'WebStorm 配置', link: '/efficiency/software/webstorm' }
       ]
     },
     { text: '在线工具', link: '/efficiency/online-tools' },
