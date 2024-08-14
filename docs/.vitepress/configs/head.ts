@@ -6,7 +6,7 @@ const preUrl = '/github-actions-demo/'
 
 
 export const head: HeadConfig[] = [
-  ['link', { rel: 'icon', type: 'image/svg+xml', href:preUrl +  '/sain-admin.svg' }],
+  ['link', { rel: 'icon', type: 'image/svg+xml', href:preUrl +  '/favicon.svg' }],
   ['meta', { name: 'theme-color', content: '#3eaf7c' }],
   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
