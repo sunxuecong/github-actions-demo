@@ -1,13 +1,5 @@
 # React 常见面试题
 
-::: tip 相关资料
-
-- [React 官方文档](https://zh-hans.reactjs.org/)
-- [旧版 React 官方文档](https://zh-hans.legacy.reactjs.org)
-- [深入浅出搞定 React | 拉钩教育](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=510)
-- [前端面试宝典之 React 篇 | 拉钩教育](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=566)
-
-:::
 
 ## `JSX` 语法
 
@@ -481,10 +473,3 @@ function HOC(WrappedComponent) {
 :::
 
 ---
-
-::: tip 相关资料
-
-- [RFClarification: why is setState asynchronous?](https://github.com/facebook/react/issues/11527)
-- [使用 Concurrent 模式（实验性）](https://zh-hans.legacy.reactjs.org/docs/concurrent-mode-adoption.html)
-
-:::
