@@ -1,7 +1,7 @@
 import type { HeadConfig } from 'vitepress'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
-const preUrl = '/github-actions-demo'
+const preUrl = '/github-actions-demo/'
 // const preUrl = process.env.APP_BASE_PATH || '/' 
 
 
@@ -14,7 +14,7 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'baidu-site-verification', content: 'codeva-Whjnr38WFE' }],
   ['link', { rel: 'apple-touch-icon', href:preUrl +  '/favicon.svg' }],
   ['link', { rel: 'mask-icon', href: preUrl + '/favicon.svg', color: '#3eaf7c' }],
-  ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+  ['link', { rel: 'manifest', href: preUrl +'/manifest.webmanifest' }],
   [
     'script',
     { src: isDevelopment ? '' : 'https://hm.baidu.com/hm.js?8092fab2f2adfc7938ba5b8885aef5b4' }
