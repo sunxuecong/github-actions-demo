@@ -6,6 +6,7 @@ const preUrl = '/github-actions-demo/'
 
 
 export const head: HeadConfig[] = [
+  ['link', { rel: 'icon', type: 'image/svg+xml', href:preUrl +  '/sain-admin.svg' }],
   ['meta', { name: 'theme-color', content: '#3eaf7c' }],
   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -13,7 +14,7 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'msapplication-TileImage', content: preUrl + '/favicon.svg' }],
   ['meta', { name: 'baidu-site-verification', content: 'codeva-Whjnr38WFE' }],
   ['link', { rel: 'apple-touch-icon', href:preUrl +  '/favicon.svg' }],
-  ['link', { rel: 'mask-icon', href: preUrl + '/favicon.svg', color: '#3eaf7c' }],
+  ['link', { rel: 'mask-icon',type: 'image/svg+xml', href: preUrl + '/favicon.svg', color: '#3eaf7c' }],
   ['link', { rel: 'manifest', href: preUrl +'/manifest.webmanifest' }],
   [
     'script',
