@@ -137,10 +137,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     },
     {
-      text: 'Git 相关',
+      text: 'Git 命令清单',
       collapsed: false,
       items: [
-        { text: 'Git 命令q清单', link: '/workflow/git/' },
+        { text: 'Git 命令清单', link: '/workflow/git/' },
       ]
     }
   ],
