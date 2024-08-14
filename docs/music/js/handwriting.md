@@ -237,87 +237,86 @@ then(onFulfilled, onReject){
 
 ```
 
-**注意：**
 
-- 连续多个 `then` 里的回调方法是同步注册的，但注册到了不同的 `callbacks` 数组中，因为每次 `then` 都返回新的 `promise` 实例（参考上面的例子和图）
 
-- 注册完成后开始执行构造函数中的异步事件，异步完成之后依次调用 `callbacks` 数组中提前注册的回调
 
-  ## 6. 手写 Promise.all
+## 6. 手写 Promise.all
 
-  **1) 核心思路**
+**1) 核心思路**
 
-  1. 接收一个 Promise 实例的数组或具有 Iterator 接口的对象作为参数
-  2. 这个方法返回一个新的 promise 对象，
-  3. 遍历传入的参数，用Promise.resolve()将参数"包一层"，使其变成一个promise对象
-  4. 参数所有回调成功才是成功，返回值数组与参数顺序一致
-  5. 参数数组其中一个失败，则触发失败状态，第一个触发失败的 Promise 错误信息作为 Promise.all 的错误信息。
+1. 接收一个 Promise 实例的数组或具有 Iterator 接口的对象作为参数
+2. 这个方法返回一个新的 promise 对象，
+3. 遍历传入的参数，用Promise.resolve()将参数"包一层"，使其变成一个promise对象
+4. 参数所有回调成功才是成功，返回值数组与参数顺序一致
+5. 参数数组其中一个失败，则触发失败状态，第一个触发失败的 Promise 错误信息作为 Promise.all 的错误信息。
 
-  **2）实现代码**
+**2）实现代码**
 
-  一般来说，Promise.all 用来处理多个并发请求，也是为了页面数据构造的方便，将一个页面所用到的在不同接口的数据一起请求过来，不过，如果其中一个接口失败了，多个请求也就失败了，页面可能啥也出不来，这就看当前页面的耦合程度了
+一般来说，Promise.all 用来处理多个并发请求，也是为了页面数据构造的方便，将一个页面所用到的在不同接口的数据一起请求过来，不过，如果其中一个接口失败了，多个请求也就失败了，页面可能啥也出不来，这就看当前页面的耦合程度了
 
-  ```js
-  function promiseAll(promises) {
-    return new Promise(function (resolve, reject) {
-      if (!Array.isArray(promises)) {
-        throw new TypeError(`argument must be a array`);
-      }
-      var resolvedCounter = 0;
-      var promiseNum = promises.length;
-      var resolvedResult = [];
-      for (let i = 0; i < promiseNum; i++) {
-        Promise.resolve(promises[i]).then(
-          (value) => {
-            resolvedCounter++;
-            resolvedResult[i] = value;
-            if (resolvedCounter == promiseNum) {
-              return resolve(resolvedResult);
-            }
-          },
-          (error) => {
-            return reject(error);
-          },
-        );
-      }
-    });
-  }
-  // test
-  let p1 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(1);
-    }, 1000);
+```js
+function promiseAll(promises) {
+  return new Promise(function (resolve, reject) {
+    if (!Array.isArray(promises)) {
+      throw new TypeError(`argument must be a array`);
+    }
+    var resolvedCounter = 0;
+    var promiseNum = promises.length;
+    var resolvedResult = [];
+    for (let i = 0; i < promiseNum; i++) {
+      Promise.resolve(promises[i]).then(
+        (value) => {
+          resolvedCounter++;
+          resolvedResult[i] = value;
+          if (resolvedCounter == promiseNum) {
+            return resolve(resolvedResult);
+          }
+        },
+        (error) => {
+          return reject(error);
+        },
+      );
+    }
   });
-  let p2 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(2);
-    }, 2000);
+}
+// test
+let p1 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve(1);
+  }, 1000);
+});
+let p2 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve(2);
+  }, 2000);
+});
+let p3 = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve(3);
+  }, 3000);
+});
+promiseAll([p3, p1, p2]).then((res) => {
+  console.log(res); // [3, 1, 2]
+});
+```
+
+## 7. 手写 Promise.race
+
+该方法的参数是 Promise 实例数组, 然后其 then 注册的回调方法是数组中的某一个 Promise 的状态变为 fulfilled 的时候就执行. 因为 Promise 的状态**只能改变一次**, 那么我们只需要把 Promise.race 中产生的 Promise 对象的 resolve 方法, 注入到数组中的每一个 Promise 实例中的回调函数中即可.
+
+```js
+Promise.race = function (args) {
+  return new Promise((resolve, reject) => {
+    for (let i = 0, len = args.length; i < len; i++) {
+      args[i].then(resolve, reject);
+    }
   });
-  let p3 = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(3);
-    }, 3000);
-  });
-  promiseAll([p3, p1, p2]).then((res) => {
-    console.log(res); // [3, 1, 2]
-  });
-  ```
+};
+```
 
-  ## 7. 手写 Promise.race
 
-  该方法的参数是 Promise 实例数组, 然后其 then 注册的回调方法是数组中的某一个 Promise 的状态变为 fulfilled 的时候就执行. 因为 Promise 的状态**只能改变一次**, 那么我们只需要把 Promise.race 中产生的 Promise 对象的 resolve 方法, 注入到数组中的每一个 Promise 实例中的回调函数中即可.
 
-  ```js
-  Promise.race = function (args) {
-    return new Promise((resolve, reject) => {
-      for (let i = 0, len = args.length; i < len; i++) {
-        args[i].then(resolve, reject);
-      }
-    });
-  };
-  ```
-
-  ## 8. 手写防抖函数
+## 8. 手写防抖函数
 
   函数防抖是指在事件被触发 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。这可以使用在一些点击请求的事件上，避免因为用户的多次点击向后端发送多次请求。
 
@@ -344,7 +343,9 @@ then(onFulfilled, onReject){
   }
   ```
 
-  ## 9. 手写节流函数
+
+
+## 9. 手写节流函数
 
   函数节流是指规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。节流可以使用在 scroll 函数的事件监听上，通过事件节流来降低事件调用的频率。
 
@@ -367,7 +368,9 @@ then(onFulfilled, onReject){
   }
   ```
 
-  ## 10. 手写类型判断函数
+
+
+## 10. 手写类型判断函数
 
   ```js
   function getType(value) {
@@ -388,7 +391,9 @@ then(onFulfilled, onReject){
   }
   ```
 
-  ## 11. 手写 call 函数
+
+
+## 11. 手写 call 函数
 
   call 函数的实现步骤：
 
@@ -421,6 +426,7 @@ Function.prototype.myCall = function (context) {
   return result;
 };
 ```
+
 
 ## 12. 手写 apply 函数
 
@@ -464,6 +470,8 @@ apply 函数的实现步骤：
    };
    ```
 
+   
+
    ## 13. 手写 bind 函数
 
    bind 函数的实现步骤：
@@ -475,7 +483,7 @@ apply 函数的实现步骤：
    3. 创建一个函数返回
 
    4. 函数内部使用 apply 来绑定函数调用，需要判断函数作为构造函数的情况，这个时候需要传入当前函数的 this 给 apply 调用，其余情况都传入指定的上下文对象。
-
+   
       ```js
       // bind 函数实现
       Function.prototype.myBind = function (context) {
@@ -496,25 +504,27 @@ apply 函数的实现步骤：
       };
       ```
 
+      
+
       ## 14. 函数柯里化的实现
-
+   
       函数柯里化指的是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。
-
+      
       ```js
       function curry(fn, args) {
         // 获取函数需要的参数长度
         let length = fn.length;
-
+      
         args = args || [];
-
+      
         return function () {
           let subArgs = args.slice(0);
-
+      
           // 拼接得到现有的所有参数
           for (let i = 0; i < arguments.length; i++) {
             subArgs.push(arguments[i]);
           }
-
+      
           // 判断参数的长度是否已经满足函数所需参数的长度
           if (subArgs.length >= length) {
             // 如果满足，执行函数
@@ -525,7 +535,7 @@ apply 函数的实现步骤：
           }
         };
       }
-
+      
       // es6 实现
       function curry(fn, ...args) {
         return fn.length <= args.length
@@ -534,20 +544,26 @@ apply 函数的实现步骤：
       }
       ```
 
+      
+
+      
+
+      
+
       ## 15. 实现AJAX请求
 
       AJAX是 Asynchronous JavaScript and XML 的缩写，指的是通过 JavaScript 的 异步通信，从服务器获取 XML 文档从中提取数据，再更新当前网页的对应部分，而不用刷新整个网页。
 
       创建AJAX请求的步骤：
-
+   
       - **创建一个 XMLHttpRequest 对象。**
-
+      
       - 在这个对象上**使用 open 方法创建一个 HTTP 请求**，open 方法所需要的参数是请求的方法、请求的地址、是否异步和用户的认证信息。
-
+      
       - 在发起请求前，可以为这个对象**添加一些信息和监听函数**。比如说可以通过 setRequestHeader 方法来为请求添加头信息。还可以为这个对象添加一个状态监听函数。一个 XMLHttpRequest 对象一共有 5 个状态，当它的状态变化时会触发onreadystatechange 事件，可以通过设置监听函数，来处理请求成功后的结果。当对象的 readyState 变为 4 的时候，代表服务器返回的数据接收完成，这个时候可以通过判断请求的状态，如果状态是 2xx 或者 304 的话则代表返回正常。这个时候就可以通过 response 中的数据来对页面进行更新了。
-
+      
       - 当对象的属性和监听函数设置完成后，最后调**用 send 方法来向服务器发起请求**，可以传入参数作为发送的数据体。
-
+      
         ```js
         const SERVER_URL = "/server";
         let xhr = new XMLHttpRequest();
@@ -573,9 +589,11 @@ apply 函数的实现步骤：
         // 发送 Http 请求
         xhr.send(null);
         ```
-
+      
+        
+      
         ## 16. 使用Promise封装AJAX请求
-
+        
         ```js
         // promise 封装实现：
         function getJSON(url) {
@@ -609,67 +627,67 @@ apply 函数的实现步骤：
         }
         ```
 
-        ## 18. 实现深拷贝
+## 18. 实现深拷贝
 
-        - **浅拷贝**：浅拷贝指的是将一个对象的属性值复制到另一个对象，如果有的属性的值为引用类型的话，那么会将这个引用的地址复制给对象，因此两个对象会有同一个引用类型的引用。浅拷贝可以使用 Object.assign 和展开运算符来实现。
+- **浅拷贝**：浅拷贝指的是将一个对象的属性值复制到另一个对象，如果有的属性的值为引用类型的话，那么会将这个引用的地址复制给对象，因此两个对象会有同一个引用类型的引用。浅拷贝可以使用 Object.assign 和展开运算符来实现。
 
-        - **深拷贝**：深拷贝相对浅拷贝而言，如果遇到属性值为引用类型的时候，它新建一个引用类型并将对应的值复制给它，因此对象获得的一个新的引用类型而不是一个原有类型的引用。深拷贝对于一些对象可以使用 JSON 的两个函数来实现，但是由于 JSON 的对象格式比 js 的对象格式更加严格，所以如果属性值里边出现函数或者 Symbol 类型的值时，会转换失败。
+- **深拷贝**：深拷贝相对浅拷贝而言，如果遇到属性值为引用类型的时候，它新建一个引用类型并将对应的值复制给它，因此对象获得的一个新的引用类型而不是一个原有类型的引用。深拷贝对于一些对象可以使用 JSON 的两个函数来实现，但是由于 JSON 的对象格式比 js 的对象格式更加严格，所以如果属性值里边出现函数或者 Symbol 类型的值时，会转换失败。
 
-          #### （1）JSON.stringify()
+  #### （1）JSON.stringify()
 
-        - `JSON.parse(JSON.stringify(obj))`是目前比较常用的深拷贝方法之一，它的原理就是利用`JSON.stringify` 将`js`对象序列化（JSON字符串），再使用`JSON.parse`来反序列化(还原)`js`对象。
+- `JSON.parse(JSON.stringify(obj))`是目前比较常用的深拷贝方法之一，它的原理就是利用`JSON.stringify` 将`js`对象序列化（JSON字符串），再使用`JSON.parse`来反序列化(还原)`js`对象。
 
-        - 这个方法可以简单粗暴的实现深拷贝，但是还存在问题，拷贝的对象中如果有函数，undefined，symbol，当使用过`JSON.stringify()`进行处理之后，都会消失
+- 这个方法可以简单粗暴的实现深拷贝，但是还存在问题，拷贝的对象中如果有函数，undefined，symbol，当使用过`JSON.stringify()`进行处理之后，都会消失
 
-          ```js
-          let obj1 = {
-            a: 0,
-            b: {
-              c: 0,
-            },
-          };
-          let obj2 = JSON.parse(JSON.stringify(obj1));
-          obj1.a = 1;
-          obj1.b.c = 1;
-          console.log(obj1); // {a: 1, b: {c: 1}}
-          console.log(obj2); // {a: 0, b: {c: 0}}
-          ```
+  ```js
+  let obj1 = {
+    a: 0,
+    b: {
+      c: 0,
+    },
+  };
+  let obj2 = JSON.parse(JSON.stringify(obj1));
+  obj1.a = 1;
+  obj1.b.c = 1;
+  console.log(obj1); // {a: 1, b: {c: 1}}
+  console.log(obj2); // {a: 0, b: {c: 0}}
+  ```
 
-          #### （2）函数库lodash的\_.cloneDeep方法
+  #### （2）函数库lodash的\_.cloneDeep方法
 
-          该函数库也有提供\_.cloneDeep用来做 Deep Copy
+  该函数库也有提供\_.cloneDeep用来做 Deep Copy
 
-          ```js
-          var _ = require("lodash");
-          var obj1 = {
-            a: 1,
-            b: { f: { g: 1 } },
-            c: [1, 2, 3],
-          };
-          var obj2 = _.cloneDeep(obj1);
-          console.log(obj1.b.f === obj2.b.f); // false
-          ```
+  ```js
+  var _ = require("lodash");
+  var obj1 = {
+    a: 1,
+    b: { f: { g: 1 } },
+    c: [1, 2, 3],
+  };
+  var obj2 = _.cloneDeep(obj1);
+  console.log(obj1.b.f === obj2.b.f); // false
+  ```
 
-          #### （3）手写实现深拷贝函数
+  #### （3）手写实现深拷贝函数
 
-          ```js
-          // 深拷贝的实现
-          function deepCopy(object) {
-            if (!object || typeof object !== "object") return;
+  ```js
+  // 深拷贝的实现
+  function deepCopy(object) {
+    if (!object || typeof object !== "object") return;
+  
+    let newObject = Array.isArray(object) ? [] : {};
+  
+    for (let key in object) {
+      if (object.hasOwnProperty(key)) {
+        newObject[key] =
+          typeof object[key] === "object"
+            ? deepCopy(object[key])
+            : object[key];
+      }
+    }
+  
+    return newObject;
+  }
+  ```
 
-            let newObject = Array.isArray(object) ? [] : {};
-
-            for (let key in object) {
-              if (object.hasOwnProperty(key)) {
-                newObject[key] =
-                  typeof object[key] === "object"
-                    ? deepCopy(object[key])
-                    : object[key];
-              }
-            }
-
-            return newObject;
-          }
-          ```
-
-          ### 持续更新中。。。
+  ### 持续更新中。。。

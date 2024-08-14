@@ -8,11 +8,11 @@
 
 命名规范是编程规范中最重要的一部分，它直接影响到代码的可读性和可维护性
 
-- `camelCase` 小驼峰式命名法（首字母小写）
-- `PascalCase` 大驼峰式命名法（首字母大写）
-- `snake_case` 下划线命名法
-- `kebab-case` 短横线命名法
-- `UPPER_CASE` 大写命名法
+* `camelCase` 小驼峰式命名法（首字母小写）
+* `PascalCase` 大驼峰式命名法（首字母大写）
+* `snake_case` 下划线命名法
+* `kebab-case` 短横线命名法
+* `UPPER_CASE` 大写命名法
 
 ### 2. 项目名
 
@@ -20,7 +20,7 @@
 
 ### 3. 目录名
 
-全部使用短横线命名法 。有复数结构时，要采用复数命名法。🌰：`src / mixins / hooks/ components / docs /api-dcde `
+全部使用短横线命名法 。有复数结构时，要采用复数命名法。🌰： `src / mixins / hooks/ components / docs /api-dcde `
 
 ### 4. 图像文件名
 
@@ -44,7 +44,7 @@ pic_people.jpg
 signup.css
 index.html
 signup.less
-render-dom.js
+render - dom.js
 index.vue
 ```
 
@@ -61,18 +61,18 @@ Dialog.jsx
 
 ### 命名严谨性
 
-- 命名应符合语义化,要**望文知义**
-- 所有文件名、目录名、变量名中都`不应出现中文`
-- 尽量减少缩写的情况发生, 反例：AbstractClass“缩写”命名成 AbsClass，此类随意缩写严重降低了代码的可阅读性
+* 命名应符合语义化, 要**望文知义**
+* 所有文件名、目录名、变量名中都`不应出现中文`
+* 尽量减少缩写的情况发生, 反例：AbstractClass“缩写”命名成 AbsClass，此类随意缩写严重降低了代码的可阅读性
 
 ### JavaScript 命名规范
 
-- 变量使用小驼峰式命名法。🌰 `const maxCount = 1996`
-- 函数使用小驼峰式命名法 🌰 `function getUserInfo() {}`
-- 对象 `key` 使用小驼峰式命名法。🌰 `const user = { userName: 'maomao' }`
-- 路由 `path` 使用短横线命名法。🌰 `path: '/user-info'`
-- 常量使用大写命名法。🌰 `const MAX_COUNT = 1996`
-- `class` 类名使用大驼峰式命名法。🌰 `class User {}`
+* 变量使用小驼峰式命名法。🌰 `const maxCount = 1996`
+* 函数使用小驼峰式命名法 🌰 `function getUserInfo() {}`
+* 对象 `key` 使用小驼峰式命名法。🌰 `const user = { userName: 'maomao' }`
+* 路由 `path` 使用短横线命名法。🌰 `path: '/user-info'`
+* 常量使用大写命名法。🌰 `const MAX_COUNT = 1996`
+* `class` 类名使用大驼峰式命名法。🌰 `class User {}`
 
 | 常用命名前缀   | 含义                        | 🌰                               |
 | :------------- | :-------------------------- | :------------------------------ |
@@ -91,17 +91,17 @@ Dialog.jsx
 | **`render`**   | 渲染视图或 UI 元素          | `renderTable()` 渲染表格        |
 | **`on`**       | 用于组件对外暴露事件        | `onSubmit()` 提交表单           |
 | **`handle`**   | 用于事件处理函数的命名      | `handleClick()` 点击事件        |
-| **`use`**      | `React / Vue` 自定义 `hook` | `useFetch()` 自定义请求 `hook`  |
+| **`use`**      | `React / Vue` 自定义 `hook` | `useFetch()` 自定义请求 `hook` |
 
 ### HTML 标签属性命名规范
 
-- `html` 标签属性使用短横线命名法。🌰 `<div class="user-info" data-index="0"></div>`
+* `html` 标签属性使用短横线命名法。🌰 `<div class="user-info" data-index="0"></div>`
 
 ### CSS代码 命名规范
 
-- 类名使用短横线命名法。🌰 `.user-info`
-- `ID` 使用小驼峰式命名法。🌰 `#userInfo`
-- 自定义变量使用短横线命名法。🌰 `--main-color: #fff`
+* 类名使用短横线命名法。🌰 `.user-info`
+* `ID` 使用小驼峰式命名法。🌰 `#userInfo`
+* 自定义变量使用短横线命名法。🌰 `--main-color: #fff`
 
 ## 三、 JavaScript 代码规范
 
@@ -110,8 +110,8 @@ Dialog.jsx
 使用**2个空格**进行缩进，不推荐使用 `4` 个空格。🌰 :
 
 ```js
-function hello (name) {
-  console.log('hi', name)
+function hello(name) {
+    console.log('hi', name)
 }
 ```
 
@@ -124,7 +124,8 @@ function hello (name) {
 const appleNum = 1
 
 // good
-;[1, 2, 3].forEach(// ...)
+;
+[1, 2, 3].forEach( // ...)
 ```
 
 ### 引号
@@ -151,15 +152,15 @@ var html = '<div class="cls">拼接HTML可以省去双引号转义</div>';
 // 使用数组拼接字符串
 let str = [
     '<ul>',
-        '<li>第一项</li>',
-        '<li>第二项</li>',
+    '<li>第一项</li>',
+    '<li>第二项</li>',
     '</ul>'
 ].join('');
 ```
 
 ### 语句
 
-#####  在 `if / else / for / do / while` 语句中，即使只有一行，也不得省略块 `{...}`。
+#####  在 `if / else / for / do / while` 语句中，即使只有一行，也不得省略块 `{...}` 。
 
 ```javascript
 // good
@@ -172,31 +173,32 @@ if (condition) callFunc();
 
 if (condition)
     callFunc();
-
 ```
 
 ##### 使用解构赋值处理对象、数组的赋值🌰 :
 
 ```javascript
 const obj = {
-  a: '1',
-  b: '2',
-  c: '3'
+    a: '1',
+    b: '2',
+    c: '3'
 };
 // good
-let {a,b,c} = obj;
+let {
+    a,
+    b,
+    c
+} = obj;
 
 // bad
 let a = obj.a;
 let b = obj.b;
 let c = obj.c;
-
 ```
 
 ### 类型转换
 
-
-##### [建议] 转换成 `string` 时，使用 `+ ''`。🌰 ：
+##### [建议] 转换成 `string` 时，使用 `+ ''` 。🌰 ：
 
 ```javascript
 // good
@@ -208,7 +210,7 @@ num.toString();
 String(num);
 ```
 
-##### [建议] 转换成 `number` 时，使用 `+`。🌰 ：
+##### [建议] 转换成 `number` 时，使用 `+` 。🌰 ：
 
 ```javascript
 // good
@@ -218,21 +220,21 @@ String(num);
 Number(str);
 ```
 
-##### [建议] `string` 转换成 `number`，要转换的字符串结尾包含非数字并期望忽略时，使用 `parseInt`。🌰 ：
+##### [建议] `string` 转换成 `number` ，要转换的字符串结尾包含非数字并期望忽略时，使用 `parseInt` 。🌰 ：
 
 ```javascript
 var width = '200px';
 parseInt(width, 10);
 ```
 
-##### [建议] 转换成 `boolean` 时，使用 `!!`。🌰 ：
+##### [建议] 转换成 `boolean` 时，使用 `!!` 。🌰 ：
 
 ```javascript
 var num = 3.14;
 !!num;
 ```
 
-##### [建议] `number` 去除小数点，使用 `Math.floor / Math.round / Math.ceil`，不使用 `parseInt`。🌰 ：
+##### [建议] `number` 去除小数点，使用 `Math.floor / Math.round / Math.ceil` ，不使用 `parseInt` 。🌰 ：
 
 ```javascript
 // good
@@ -263,16 +265,14 @@ function syncViewStateOnUserAction() {
     if (x.checked) {
         y.checked = true;
         z.value = '';
-    }
-    else {
+    } else {
         y.checked = false;
     }
 
     if (!a.value) {
         warning.innerText = 'Please enter it';
         submitButton.disabled = true;
-    }
-    else {
+    } else {
         warning.innerText = '';
         submitButton.disabled = false;
     }
@@ -289,8 +289,7 @@ function syncXStateToView() {
     if (x.checked) {
         y.checked = true;
         z.value = '';
-    }
-    else {
+    } else {
         y.checked = false;
     }
 }
@@ -298,26 +297,21 @@ function syncXStateToView() {
 function checkAAvailability() {
     if (!a.value) {
         displayWarningForAMissing();
-    }
-    else {
+    } else {
         clearWarnignForA();
     }
 }
 ```
-
-
 
 #### 一个函数的参数控制在 `6` 个以内。
 
 除去不定长参数以外，函数具备不同逻辑意义的参数建议控制在 6 个以内，过多参数会导致维护难度增大。🌰 ：
 
 ```js
-function Tree(argument1,argument2,argument3,argument4,argument5,argument6) { // bad
+function Tree(argument1, argument2, argument3, argument4, argument5, argument6) { // bad
 
 }
 ```
-
-
 
 #### 不要改参数，不要对参数重新赋值
 
@@ -331,8 +325,6 @@ function Tree(datasource) {
 
 可以通过 deepClone 等手段将自身维护的对象与外部传入的分离，保证不会相互影响。
 
-
-
 #### 箭头函数
 
 当你一定要用函数表达式（在回调函数里）的时候就用箭头表达式吧
@@ -340,18 +332,15 @@ function Tree(datasource) {
 ```js
 // good
 [1, 2, 3].map((x) => {
-  const y = x + 1;
-  return x * y;
+    const y = x + 1;
+    return x * y;
 });
 // bad
-[1, 2, 3].map(function (x) {
-  const y = x + 1;
-  return x * y;
+[1, 2, 3].map(function(x) {
+    const y = x + 1;
+    return x * y;
 });
-
 ```
-
-
 
 #### 使用闭包，要小心。
 
@@ -359,7 +348,8 @@ function Tree(datasource) {
 
 ```javascript
 function foo(element, a, b) {
-    element.onclick = function() { /* 使用 a 和 b */ };
+    element.onclick = function() {
+        /* 使用 a 和 b */ };
 }
 ```
 
@@ -371,7 +361,8 @@ function foo(element, a, b) {
 }
 
 function bar(a, b) {
-    return function() { /* 使用 a 和 b */ }
+    return function() {
+        /* 使用 a 和 b */ }
 }
 ```
 
@@ -380,25 +371,25 @@ function bar(a, b) {
 ```javascript
 // bad
 function foo() {
-  const self = this;
-  return function () {
-    console.log(self);
-  };
+    const self = this;
+    return function() {
+        console.log(self);
+    };
 }
 
 // bad
 function foo() {
-  const that = this;
-  return function () {
-    console.log(that);
-  };
+    const that = this;
+    return function() {
+        console.log(that);
+    };
 }
 
 // good
 function foo() {
-  return () => {
-    console.log(this);
-  };
+    return () => {
+        console.log(this);
+    };
 }
 ```
 
@@ -415,8 +406,6 @@ function foo() {
 1. PC端img图片必须填写`width`、`height`属性
 
 2. 移动端必须填写`alt`属性
-
-
 
 ## 四、 Vue 项目规范
 
@@ -443,12 +432,11 @@ function foo() {
 }
 </style>
 
-
 ```
 
 ### v-for 循环必须加上 key 属性，在整个 for 循环中 key 需要唯一
 
-**在组件上必须用 `key` 搭配 `v-for`**。
+**在组件上必须用 `key` 搭配 `v-for` **。
 
 ```vue
 <ul>
@@ -477,7 +465,7 @@ function foo() {
 
 我们可以这样做：
 
-- 为了过滤一个列表中的项目 (比如 `v-for="user in users" v-if="user.isActive"`)。在这种情形下，请将 `users` 替换为一个**计算属性** (比如 `activeUsers`)，让其返回过滤后的列表。
+* 为了过滤一个列表中的项目 (比如 `v-for="user in users" v-if="user.isActive"`)。在这种情形下，请将 `users` 替换为一个**计算属性** (比如 `activeUsers`)，让其返回过滤后的列表。
 
 ```vue
 computed: {
@@ -539,9 +527,9 @@ computed: {
 
 具体：
 
-- 提供默认值。
-- 使用 `type` 属性校验类型。
-- 使用 props 之前先检查该 prop 是否存在。
+* 提供默认值。
+* 使用 `type` 属性校验类型。
+* 使用 props 之前先检查该 prop 是否存在。
 
 ```vue
 <template>
@@ -565,7 +553,7 @@ computed: {
 
 ### 不要将 `this` 赋值给 变量
 
-尽量不要在项目中随意使用 `const that = this;`，这个上文中已经提到过了 ，在 vue中也是 一样的原则。
+尽量不要在项目中随意使用 `const that = this;` ，这个上文中已经提到过了 ，在 vue中也是 一样的原则。
 
 #### 为什么？
 
@@ -616,8 +604,6 @@ export default {
 };
 </script>
 ```
-
-
 
 ### 不要打破 vue 的单向数据流
 
@@ -685,11 +671,9 @@ export default {
 
 ### 其他
 
-- 避免 this.$parent。
-- 调试信息 console.log() debugger 使用完及时删除。
-- 组件卸载时，一定要清除之前前添加的事件监听器。
-
-
+* 避免 this.$parent。
+* 调试信息 console.log() debugger 使用完及时删除。
+* 组件卸载时，一定要清除之前前添加的事件监听器。
 
 ## 五、Git 规范
 
@@ -701,30 +685,28 @@ export default {
 
 ![img](https://cdn.jsdelivr.net/gh/sunxuecong/static/git_flow.png)
 
-
-
 ### 命名
 
-分支命名以 `feature/xx-xx` `fix/xx-xx` 的格式命名，中间用短横线 `-` 连接。
+分支命名以 `feature/xx-xx`  `fix/xx-xx` 的格式命名，中间用短横线 `-` 连接。
 
 ### 分支管理
 
 项目需要根据环境的不同创建对应的分支：
 
-- master（线上环境）
-- develop（开发环境）
-- test（测试环境）
-- feature/xxx（功能分支）
-- fix/xxx（修复分支）
-- 其他...
+* master（线上环境）
+* develop（开发环境）
+* test（测试环境）
+* feature/xxx（功能分支）
+* fix/xxx（修复分支）
+* 其他...
 
 ### 开发新功能
 
-当团队成员开发新功能时，需要从 `master` 分支上拉一个 `feature/功能名称-开发姓名` 分支进行开发，例如：`feature/login-tgz`。开发完成后需要合并到 `develop` 分支进行部署测试。
+当团队成员开发新功能时，需要从 `master` 分支上拉一个 `feature/功能名称-开发姓名` 分支进行开发，例如： `feature/login-tgz` 。开发完成后需要合并到 `develop` 分支进行部署测试。
 
 ### 修改 bug
 
-当团队成员修改线上 bug 时，需要从 `master` 分支拉一个 `fix/功能名称-bug号/bug现象` 分支进行修复，例如：`fix/login-404`。 修复完成并通过测试后再合并到 `master` 分支进行部署。
+当团队成员修改线上 bug 时，需要从 `master` 分支拉一个 `fix/功能名称-bug号/bug现象` 分支进行修复，例如： `fix/login-404` 。 修复完成并通过测试后再合并到 `master` 分支进行部署。
 
 以 `feature` 或 `fix` 开始的分支都属于临时分支，在通过测试并上线后需要将临时分支进行删除。避免 git 上出现太多无用的分支。
 
@@ -741,7 +723,7 @@ chore: 修改按钮样式
 chore: 修改按钮样式及文字
 ```
 
-**注意**，在将分支合并到另一分支前，例如将 `feature/*` 合并到 `develop`。需要先拉取 `develop` 的最新更新，然后回到 `feature/*`，执行 `git rebase develop` 操作，再提交，最后提合并分支操作。
+**注意**，在将分支合并到另一分支前，例如将 `feature/*` 合并到 `develop` 。需要先拉取 `develop` 的最新更新，然后回到 `feature/*` ，执行 `git rebase develop` 操作，再提交，最后提合并分支操作。
 
 ### 标签备份
 
@@ -782,18 +764,18 @@ commit message 分为三个部分(使用空行分割):
 
 commit 的类型：
 
-- feat: 新功能、新特性
-- fix: 修改 bug
-- perf: 更改代码，以提高性能（在不影响代码内部行为的前提下，对程序性能进行优化）
-- refactor: 代码重构（重构，在不影响代码内部行为、功能下的代码修改）
-- docs: 文档修改
-- style: 代码格式修改, 注意不是 css 修改（例如分号修改）
-- test: 测试用例新增、修改
-- build: 影响项目构建或依赖项修改
-- revert: 恢复上一次提交
-- ci: 持续集成相关文件修改
-- chore: 其他修改（不在上述类型中的修改）
-- release: 发布新版本
+* feat: 新功能、新特性
+* fix: 修改 bug
+* perf: 更改代码，以提高性能（在不影响代码内部行为的前提下，对程序性能进行优化）
+* refactor: 代码重构（重构，在不影响代码内部行为、功能下的代码修改）
+* docs: 文档修改
+* style: 代码格式修改, 注意不是 css 修改（例如分号修改）
+* test: 测试用例新增、修改
+* build: 影响项目构建或依赖项修改
+* revert: 恢复上一次提交
+* ci: 持续集成相关文件修改
+* chore: 其他修改（不在上述类型中的修改）
+* release: 发布新版本
 
 ### scope
 
@@ -815,18 +797,18 @@ commit message 的概述
 
 以下内容来源于：https://www.conventionalcommits.org/zh-hans/v1.0.0-beta.4/
 
-- 每个提交都必须使用类型字段前缀，它由一个名词组成，诸如 `feat` 或 `fix` ，其后接一个可选的作用域字段，以及一个必要的冒号（英文半角）和空格。
-- 当一个提交为应用或类库实现了新特性时，必须使用 `feat` 类型。
-- 当一个提交为应用修复了 `bug` 时，必须使用 `fix` 类型。
-- 作用域字段可以跟随在类型字段后面。作用域必须是一个描述某部分代码的名词，并用圆括号包围，例如： `fix(parser):`
-- 描述字段必须紧接在类型/作用域前缀的空格之后。描述指的是对代码变更的简短总结，例如： `fix: array parsing issue when multiple spaces were contained in string.`
-- 在简短描述之后，可以编写更长的提交正文，为代码变更提供额外的上下文信息。正文必须起始于描述字段结束的一个空行后。
-- 在正文结束的一个空行之后，可以编写一行或多行脚注。脚注必须包含关于提交的元信息，例如：关联的合并请求、Reviewer、破坏性变更，每条元信息一行。
-- 破坏性变更必须标示在正文区域最开始处，或脚注区域中某一行的开始。一个破坏性变更必须包含大写的文本 `BREAKING CHANGE`，后面紧跟冒号和空格。
-- 在 `BREAKING CHANGE:` 之后必须提供描述，以描述对 API 的变更。例如： `BREAKING CHANGE: environment variables now take precedence over config files.`
-- 在提交说明中，可以使用 `feat` 和 `fix` 之外的类型。
-- 工具的实现必须不区分大小写地解析构成约定式提交的信息单元，只有 `BREAKING CHANGE` 必须是大写的。
-- 可以在类型/作用域前缀之后，: 之前，附加 `!` 字符，以进一步提醒注意破坏性变更。当有 `!` 前缀时，正文或脚注内必须包含 `BREAKING CHANGE: description`
+* 每个提交都必须使用类型字段前缀，它由一个名词组成，诸如 `feat` 或 `fix` ，其后接一个可选的作用域字段，以及一个必要的冒号（英文半角）和空格。
+* 当一个提交为应用或类库实现了新特性时，必须使用 `feat` 类型。
+* 当一个提交为应用修复了 `bug` 时，必须使用 `fix` 类型。
+* 作用域字段可以跟随在类型字段后面。作用域必须是一个描述某部分代码的名词，并用圆括号包围，例如： `fix(parser):`
+* 描述字段必须紧接在类型/作用域前缀的空格之后。描述指的是对代码变更的简短总结，例如： `fix: array parsing issue when multiple spaces were contained in string.`
+* 在简短描述之后，可以编写更长的提交正文，为代码变更提供额外的上下文信息。正文必须起始于描述字段结束的一个空行后。
+* 在正文结束的一个空行之后，可以编写一行或多行脚注。脚注必须包含关于提交的元信息，例如：关联的合并请求、Reviewer、破坏性变更，每条元信息一行。
+* 破坏性变更必须标示在正文区域最开始处，或脚注区域中某一行的开始。一个破坏性变更必须包含大写的文本 `BREAKING CHANGE`，后面紧跟冒号和空格。
+* 在 `BREAKING CHANGE:` 之后必须提供描述，以描述对 API 的变更。例如： `BREAKING CHANGE: environment variables now take precedence over config files.`
+* 在提交说明中，可以使用 `feat` 和 `fix` 之外的类型。
+* 工具的实现必须不区分大小写地解析构成约定式提交的信息单元，只有 `BREAKING CHANGE` 必须是大写的。
+* 可以在类型/作用域前缀之后，: 之前，附加 `!` 字符，以进一步提醒注意破坏性变更。当有 `!` 前缀时，正文或脚注内必须包含 `BREAKING CHANGE: description`
 
 ### 示例
 
@@ -838,11 +820,11 @@ commit message 的概述
 
 ```js
 // 示例1
-fix(global):修复checkbox不能复选的问题
+fix(global): 修复checkbox不能复选的问题
 // 示例2 下面圆括号里的 common 为通用管理的名称
-fix(common): 修复字体过小的BUG，将通用管理下所有页面的默认字体大小修改为 14px
+fix(common): 修复字体过小的BUG， 将通用管理下所有页面的默认字体大小修改为 14 px
 // 示例3
-fix(test): value.length -> values.length
+fix(test): value.length - > values.length
 ```
 
 ##### feat（添加新功能或新页面）
@@ -850,9 +832,9 @@ fix(test): value.length -> values.length
 ```js
 feat: 添加网站主页静态页面
 
-这是一个示例，假设对任务静态页面进行了一些描述。
+这是一个示例， 假设对任务静态页面进行了一些描述。
 
-这里是备注，可以是放 BUG 链接或者一些重要性的东西。
+这里是备注， 可以是放 BUG 链接或者一些重要性的东西。
 ```
 
 ##### chore（其他修改）
@@ -865,8 +847,6 @@ chore: 将表格中的查看详情改为详情
 
 其他类型的 commit 和上面三个示例差不多，在此不再赘述。
 
-
-
 ## 六、规范验证与代码格式化
 
 为保证团队中代码风格统一，以及更方便的格式化代码。推荐使用**Prettier**作为代码格式化工具。
@@ -877,17 +857,13 @@ chore: 将表格中的查看详情改为详情
 
 在 vscode 扩展商店搜索Prettier ，选择第一条然后安装。
 
-
-
 ![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_home.png)
 
-在项目根目录 下创建一个`.prettierrc`的文件用于配置格式化的规则。
-
-
+在项目根目录 下创建一个 `.prettierrc` 的文件用于配置格式化的规则。
 
 ![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_edit.png)
 
-下面是我已经写好的规则。可以直接复制到项目`.prettierrc`文件中。
+下面是我已经写好的规则。可以直接复制到项目 `.prettierrc` 文件中。
 
 ```json
 {
@@ -916,27 +892,26 @@ chore: 将表格中的查看详情改为详情
 
 ```js
 {
-  "printWidth": 180, // 指定打印机将换行的行长度
-  "tabWidth": 2, // 每个缩进层级使用 4 个空格
-  "useTabs": false, // 使用空格缩进而不是 tab 缩进
-  "semi": false, // 在语句末尾打印分号
-  "singleQuote": true,  // 是否使用单引号替代双引号
-  "trailingComma": "none", //末尾是否加上逗号
-  "arrowParens": "avoid",  // 当箭头函数只有一个参数是否加括号
-  "bracketSpacing": true,  // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
-  "bracketSameLine": false,  // 把多行HTML元素的>放在最后一行的末尾，而不是单独放在下一行(不适用于自关闭元素)。
-  "quoteProps": "as-needed", //仅在必需时为对象的key添加引号
-  "vueIndentScriptAndStyle": false, //不对vue中的script及style标签缩进
-  "endOfLine": "lf", //结束行形式
-  "jsxSingleQuote": true, // jsx中使用单引号
-  "embeddedLanguageFormatting": "auto", //对引用代码进行格式化
-  "requirePragma": false, //无需顶部注释即可格式化
-  "insertPragma": false,  //在已被preitter格式化的文件顶部加上标注
-  // "htmlWhitespaceSensitivity": "css",
-  "htmlWhitespaceSensitivity": "ignore", //对HTML全局空白不敏感
-  "proseWrap": "preserve" //
+    "printWidth": 180, // 指定打印机将换行的行长度
+    "tabWidth": 2, // 每个缩进层级使用 4 个空格
+    "useTabs": false, // 使用空格缩进而不是 tab 缩进
+    "semi": false, // 在语句末尾打印分号
+    "singleQuote": true, // 是否使用单引号替代双引号
+    "trailingComma": "none", //末尾是否加上逗号
+    "arrowParens": "avoid", // 当箭头函数只有一个参数是否加括号
+    "bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+    "bracketSameLine": false, // 把多行HTML元素的>放在最后一行的末尾，而不是单独放在下一行(不适用于自关闭元素)。
+    "quoteProps": "as-needed", //仅在必需时为对象的key添加引号
+    "vueIndentScriptAndStyle": false, //不对vue中的script及style标签缩进
+    "endOfLine": "lf", //结束行形式
+    "jsxSingleQuote": true, // jsx中使用单引号
+    "embeddedLanguageFormatting": "auto", //对引用代码进行格式化
+    "requirePragma": false, //无需顶部注释即可格式化
+    "insertPragma": false, //在已被preitter格式化的文件顶部加上标注
+    // "htmlWhitespaceSensitivity": "css",
+    "htmlWhitespaceSensitivity": "ignore", //对HTML全局空白不敏感
+    "proseWrap": "preserve" //
 }
-
 ```
 
 ### 设置为默认格式化程序。
@@ -947,10 +922,8 @@ chore: 将表格中的查看详情改为详情
 
 ![image-20240711175546955](https://cdn.jsdelivr.net/gh/sunxuecong/static/pretier_onsave.png)
 
-
-
 ### 注：
 
-- 基于咱们目前的项目，Eslint 和 git钩子 暂时不作要求，使用的话可能会给咱们带来很多困难和问题，反而影响效率。
+* 基于咱们目前的项目，Eslint 和 git钩子 暂时不作要求，使用的话可能会给咱们带来很多困难和问题，反而影响效率。
 
-- 后面如果从 0 开始的新项目的话，也会给提供一份解决方案，代码必须符合规范才能提交到远程仓库。
+* 后面如果从 0 开始的新项目的话，也会给提供一份解决方案，代码必须符合规范才能提交到远程仓库。
