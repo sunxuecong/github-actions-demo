@@ -101,7 +101,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   },
   {
     text: '音乐台',
-    link: '/music/song',
+    link: '/music/sky',
     activeMatch: '^/music'
   },
   {

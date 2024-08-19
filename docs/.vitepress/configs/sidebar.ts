@@ -177,8 +177,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: '音乐台',
       // collapsed: false,
       items: [
-        { text: '小行迹', link: '/music/song' },
+        { text: '海阔天空', link: '/music/sky' },
+        { text: '鼓楼', link: '/music/drumtower' },
         { text: '嘉宾', link: '/music/guest' },
+        { text: 'ペガサス幻想', link: '/music/tianmasfantasy' },
       ]
     }
   ],
