@@ -251,7 +251,7 @@ import{_ as kt,o as I,h as R,j as cr,e as ur,q as g,n as dt,G as Bt,f as F,L as 
 [03:41.550]
 [03:45.960]
 [03:47.329] ～END～
-`},Ra={id:26137712,name:"富士山下",img:"https://p2.music.126.net/jzNxBp5DCER2_aKGsXeRww==/109951167435823724.jpg",artists:[{id:35069014,name:"富士山下",tns:[],alias:[]}],duration:258902,albumName:"富士山下",url:tt+" fushishanxia.mp3",artistsText:"陈奕迅",durationSecond:258.902,mvId:0,lyric:`[00:00.000] 作词 : 林夕
+`},Ra={id:26137712,name:"富士山下",img:"https://p2.music.126.net/jzNxBp5DCER2_aKGsXeRww==/109951167435823724.jpg",artists:[{id:35069014,name:"富士山下",tns:[],alias:[]}],duration:258902,albumName:"富士山下",url:tt+"fushishanxia.mp3",artistsText:"陈奕迅",durationSecond:258.902,mvId:0,lyric:`[00:00.000] 作词 : 林夕
 [00:00.675] 作曲 : Christopher Chak
 [00:01.350] 编曲 : 陈珀/C. Y. Kong
 [00:02.025] 制作人 : 梁荣骏
@@ -316,7 +316,7 @@ import{_ as kt,o as I,h as R,j as cr,e as ur,q as g,n as dt,G as Bt,f as F,L as 
 [04:14.699]Mixed by Simon Li at nOiz
 [04:15.699]OP: Forward Music Publishing Co Ltd
 [04:16.699]SP: Fujipacific Music (S.E. Asia) Ltd
-`},_a={id:186057,name:" 米兰的小铁匠",img:"https://p1.music.126.net/eDfuSni9ZWToHdqilVRI_w==/109951166698447900.jpg",artists:[{id:35069014,name:"周杰伦",tns:[],alias:[]}],duration:238654,albumName:"八度空间",url:tt+" xiaotiejiang.mp3",artistsText:"周杰伦",durationSecond:238.654,mvId:0,lyric:`[00:00.000] 作词 : 方文山
+`},_a={id:186057,name:" 米兰的小铁匠",img:"https://p1.music.126.net/eDfuSni9ZWToHdqilVRI_w==/109951166698447900.jpg",artists:[{id:35069014,name:"周杰伦",tns:[],alias:[]}],duration:238654,albumName:"八度空间",url:tt+"xiaotiejiang.mp3",artistsText:"周杰伦",durationSecond:238.654,mvId:0,lyric:`[00:00.000] 作词 : 方文山
 [00:01.000] 作曲 : 周杰伦
 [00:02.000] 编曲 : 洪敬尧
 [00:03.000]
