@@ -20,7 +20,7 @@ const guest = {
   artists: [{ id: 67311, name: "张远", tns: [], alias: [] }],
   duration: 332560,
   albumName: "嘉宾",
-  url: "https://oss-xuxin.oss-cn-beijing.aliyuncs.com/blog/music/%E5%98%89%E5%AE%BE-%E5%BC%A0%E8%BF%9C.mp3",
+  url:baseMusicUrl + 'jiabin.mp3',
   artistsText: "张远",
   durationSecond:332.560,
   mvId: 0,
@@ -60,7 +60,7 @@ const tianmasfantasy = {
   artists: [{ id: 35069014, name: "MAKE-UP", tns: [], alias: [] }],
   duration: 229000,
   albumName: "聖闘士星矢",
-  url: "https://m701.music.126.net/20240819182532/b2dd918ebe2f7e21f48e41ae31c1e2a8/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/44625735251/9b1c/362f/53e8/699c74e61598f277744486bc9b629386.mp3",
+  url: baseMusicUrl + 'huanxiang.mp3',
   artistsText: "圣斗士星矢Ω  原声带II",
   durationSecond:229.000,
   mvId: 0,
@@ -68,4 +68,7 @@ const tianmasfantasy = {
 }
 
 export { traillet, guest ,sky,drumtower,tianmasfantasy}
+
+
+
 
