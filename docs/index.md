@@ -16,7 +16,7 @@ hero:
       link: https://github.com/sunxuecong
       theme: alt
     - text: 听点音乐
-      link: /music/song
+      link: /music/guest
       theme: alt
 features:
   - icon: 📖
