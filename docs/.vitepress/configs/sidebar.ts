@@ -182,6 +182,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '嘉宾', link: '/music/guest' },
         { text: 'ペガサス幻想', link: '/music/tianmasfantasy' },
         { text: '富士山下', link: '/music/fushishanxia' },
+        { text: '米兰的小铁匠', link: '/music/xiaotiejiang' },
       ]
     }
   ],
