@@ -1,3 +1,5 @@
+const baseMusicUrl = 'https://sunxuecong.github.io/github-actions-demo/'
+
 const traillet = {
   id: 1974444808,
   name: "小行迹",
@@ -32,7 +34,7 @@ const sky = {
   artists: [{ id: 11127, name: "Beyond", tns: [], alias: [] }],
   duration: 239560,
   albumName: "海阔天空",
-  url: "https://m701.music.126.net/20240819174554/14f22ee8a0f2e0614ca915b803a49b57/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/32407952649/e502/6f7a/66e9/2072231eee8912e4312bd92b077be16b.mp3",
+  url: baseMusicUrl + 'haikuotiankong.mp3',
   artistsText: "Beyond",
   durationSecond:239.560,
   mvId: 0,
@@ -45,7 +47,7 @@ const drumtower = {
   artists: [{ id: 35069014, name: "无法长大", tns: [], alias: [] }],
   duration: 281002,
   albumName: "无法长大",
-  url: "https://m801.music.126.net/20240819180115/397f0c8e282a14b20209c39b1a95598d/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/28481682411/1318/c9b4/f1f7/1d334c08286a0a1c125a711a3f9690d6.mp3",
+  url: baseMusicUrl + 'gulou.mp3',
   artistsText: "赵雷",
   durationSecond:281.002,
   mvId: 0,
