@@ -161,7 +161,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/pit/': [
     {
-      text: '踩坑记录',
+      text: '经验心得',
       // collapsed: false,
       items: [
         { text: 'npm 踩坑记录', link: '/pit/npm' },

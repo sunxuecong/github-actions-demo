@@ -22,9 +22,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '^/front'
   },
   
-  { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
+  // { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
   {
-    text: 'Workflow',
+    text: '实用技巧',
     items: [
       {
         // text: '常用工具/方法',
@@ -66,7 +66,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '^/workflow'
   },
   {
-    text: '笔记',
+    text: '经验心得',
     items: [  
       {
         text: '踩坑记录',

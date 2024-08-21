@@ -538,7 +538,7 @@ export default {
       }
 
       .lyric-wrap {
-        // width: 380px;
+        max-width: 280px;
         height: 380px;
         mask-image: linear-gradient(
           180deg,

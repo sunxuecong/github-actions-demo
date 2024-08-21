@@ -25,25 +25,25 @@ features:
     link: /front/javascript/types
     linkText: 开始阅读
   - icon: 📘
-    title: 备忘录
-    details: 将日常工作中遇到的问题做一份备忘录，方便查阅。
+    title: 后端物语
+    details: 围绕后端开发的技术、经验、故事和知识的分享。
     link: /analysis/utils/only-allow
     linkText: 查看问题
   - icon: 💡
-    title: 技术视野
-    details: 跟随前沿技术，洞察技术行业趋势，保持竞争力。
+    title: 实用技巧
+    details: 工作中积累的一些开发技巧。
     link: /workflow/utils/library
-    linkText: 欢迎 Follow
+    linkText:  插件扩展
+  - icon: 🐞
+    title: 经验心得
+    details: 记录一下踩过的坑，总有一些让你意想不到的问题。
+    link: /pit/npm
+    linkText: 经验心得
   - icon:  🔧
-    title: 编程工具
+    title: 工具软件
     details: 归纳一些编程相关工具与网站，提高效率。
     link: /efficiency/online-tools
     linkText: 提高效率
-  - icon: 🐞
-    title: 踩坑记录
-    details: 记录一下踩过的坑，总有一些让你意想不到的问题。
-    link: /pit/npm
-    linkText: 踩坑记录
   - icon:  🎉
     title: 风来自很远的地方，去看看也无妨 😄。
     details: '<small class="bottom-small">-- Sain Sun</small>'
