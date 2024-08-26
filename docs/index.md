@@ -56,6 +56,7 @@ features:
 }
 
 
+
 .m-home-layout .details small {
   opacity: 0.8;
 }
