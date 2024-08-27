@@ -27,7 +27,7 @@ features:
   - icon: 📘
     title: 后端物语
     details: 围绕后端开发的技术、经验、故事和知识的分享。
-    link: /analysis/utils/only-allow
+    link: /backend/node/index
     linkText: 查看问题
   - icon: 💡
     title: 实用技巧

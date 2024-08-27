@@ -58,11 +58,6 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       ],
     },
     {
-      text: "Node",
-      collapsed: false,
-      items: [{ text: "package.json", link: "/front/node/pkg" }],
-    },
-    {
       text: "概念知识点",
       collapsed: false,
       items: [
@@ -81,6 +76,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       // collapsed: false,
       items: [
         { text: "Node笔记", link: "/backend/node/index" },
+        { text: "Package.json详解", link: "/backend/node/pkg" }
       ],
     },
     {

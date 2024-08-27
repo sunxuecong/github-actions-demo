@@ -7,7 +7,7 @@
   "description": "Development related notes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunxuecong/sain-notes-sun.git"
+    "url": "git+https://github.com/sunxuecong/github-actions-demo"
   },
   "license": "MIT",
   "homepage": "https://sunxuecong.github.io/github-actions-demo",
