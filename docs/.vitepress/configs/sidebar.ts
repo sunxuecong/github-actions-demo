@@ -58,6 +58,20 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       ],
     },
     {
+      text: "Vue",
+      collapsed: false,
+      items: [
+        { text: "Vue2项目迁移Vite", link: "/front/vue/transfer" },
+      ],
+    },
+    {
+      text: "React",
+      collapsed: false,
+      items: [
+        { text: "React 基础总结一", link: "/front/react/index" },
+      ],
+    },
+    {
       text: "概念知识点",
       collapsed: false,
       items: [

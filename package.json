@@ -1,5 +1,5 @@
 {
-  "name": "sain-notes",
+  "name": "Sain-notes",
   "type": "module",
   "private": true,
   "version": "1.0.0",
@@ -7,7 +7,7 @@
   "description": "Development related notes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunxuecong/github-actions-demo"
+    "url": "https://github.com/sunxuecong/github-actions-demo"
   },
   "license": "MIT",
   "homepage": "https://sunxuecong.github.io/github-actions-demo",
