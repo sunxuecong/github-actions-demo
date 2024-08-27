@@ -37,7 +37,8 @@ export default defineConfig({
 
     // 右侧页面导航（大纲）
     outline: {
-      level: 'deep',
+      level: 2,
+      // level: 'deep',
       label: '本页目录',
     },
 
