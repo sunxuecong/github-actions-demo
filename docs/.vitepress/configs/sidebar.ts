@@ -162,7 +162,11 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
     {
       text: "Node 相关",
       // collapsed: false,
-      items: [{ text: "npm 常用命令", link: "/workflow/node/npm" }],
+      items: [
+        { text: "npm 常用命令", link: "/workflow/node/npm" },
+        { text: "发布自己的 npm 包", link: "/workflow/node/npmpublish" },
+        { text: "优雅的修改node_modules中的依赖库", link: "/workflow/node/nodemodules" }
+      ],
     },
     {
       text: "终端相关",
