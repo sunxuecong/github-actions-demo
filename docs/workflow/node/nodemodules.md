@@ -43,4 +43,4 @@ npm i patch-package
 
 5. `patches`这个目录以及里面的文件可以使用 git 跟踪，分享给团队的其他人
 
-* 当其他人使用 `npm install` 安装第三方依赖库时，patch-package 会根据 `patches`目录下的文件，将你改好的代码同步跟新到 `node_modules` 目录下修改过的依赖库的代码
+* 当其他人使用 `npm install` 安装第三方依赖库时，patch-package 会根据 `patches`目录下的文件，将你改好的代码同步跟新到 `node_modules` 目录下修改过的依赖库的代码 
