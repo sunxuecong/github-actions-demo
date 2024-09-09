@@ -10,7 +10,7 @@ npm config get registry
 yarn config get registry
 ```
 
-设置镜像源地址
+设置镜像源地址 s
 
 ```sh
 # 以设置淘宝镜像源为例
