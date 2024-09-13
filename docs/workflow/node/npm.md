@@ -10,7 +10,7 @@ npm config get registry
 yarn config get registry
 ```
 
-设置镜像源地址 s
+设置镜像源地址
 
 ```sh
 # 以设置淘宝镜像源为例
@@ -89,7 +89,7 @@ npm pkg set name='sain' engines.node='>=18'
 
 ```sh
 npm pkg delete <key>
-# 🌰
+#         
 npm pkg delete scripts.build
 ```
 
