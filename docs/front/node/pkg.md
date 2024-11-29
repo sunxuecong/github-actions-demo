@@ -1,4 +1,4 @@
-# package.json
+# package.json详解
 
 ## 描述配置
 

@@ -21,11 +21,11 @@ export const nav: DefaultTheme.Config['nav'] = [
     // ],
     activeMatch: '^/front'
   },
-  {
-    text: '后端物语',
-    link: '/backend/nginx/index',
-    activeMatch: '^/backend'
-  },
+  // {
+  //   text: '后端物语',
+  //   link: '/backend/nginx/index',
+  //   activeMatch: '^/backend'
+  // },
 
   // { text: '源码阅读', link: '/analysis/react/18', activeMatch: '^/analysis' },
   {

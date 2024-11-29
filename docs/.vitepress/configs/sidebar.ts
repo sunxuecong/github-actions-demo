@@ -2,20 +2,6 @@ import type { DefaultTheme } from "vitepress";
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
   "/front/": [
-    
-    // {
-    //   text: "JavaScript 基础知识",
-    //   collapsed: false,
-    //   items: [
-    //     { text: "原型与原型链详解", link: "/front/javascript/prototypeChain" },
-    //     {
-    //       text: "JavaScript手写代码汇总",
-    //       link: "/front/javascript/handwriting",
-    //     },
-    //     { text: "前端代码规范", link: "/front/javascript/specification" },
-    //   ],
-    // },
-    
     {
       text: "JavaScript 基础知识",
       collapsed: false,
@@ -80,6 +66,28 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       ],
     },
     {
+      text: "Node",
+      collapsed: false,
+      items: [
+        { text: "Node笔记", link: "/front/node/index" },
+        { text: "Package.json详解", link: "/front/node/pkg" }
+      ],
+    },
+    {
+      text: "Nginx",
+      collapsed: false,
+      items: [
+        { text: "Nginx常用知识", link: "/front/nginx/index" },
+      ],
+    },
+    {
+      text: "Docker",
+      collapsed: false,
+      items: [
+        { text: "Docker常用知识", link: "/front/docker/index" },
+      ],
+    },
+    {
       text: "概念知识点",
       collapsed: false,
       items: [
@@ -87,35 +95,32 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         { text: "前端页面渲染方式", link: "/front/concept/page-rendering" },
       ],
     },
-    {
-      text: "编程题",
-      link: "/front/coding/",
-    },
+
   ],
-  "/backend/": [
-    {
-      text: "Node",
-      // collapsed: false,
-      items: [
-        { text: "Node笔记", link: "/backend/node/index" },
-        { text: "Package.json详解", link: "/backend/node/pkg" }
-      ],
-    },
-    {
-      text: "Nginx",
-      // collapsed: false,
-      items: [
-        { text: "Nginx常用知识", link: "/backend/nginx/index" },
-      ],
-    },
-    {
-      text: "Docker",
-      // collapsed: false,
-      items: [
-        { text: "Docker常用知识", link: "/backend/docker/index" },
-      ],
-    },
-  ],
+  // "/backend/": [
+  //   {
+  //     text: "Node",
+  //     // collapsed: false,
+  //     items: [
+  //       { text: "Node笔记", link: "/backend/node/index" },
+  //       { text: "Package.json详解", link: "/backend/node/pkg" }
+  //     ],
+  //   },
+  //   {
+  //     text: "Nginx",
+  //     // collapsed: false,
+  //     items: [
+  //       { text: "Nginx常用知识", link: "/backend/nginx/index" },
+  //     ],
+  //   },
+  //   {
+  //     text: "Docker",
+  //     // collapsed: false,
+  //     items: [
+  //       { text: "Docker常用知识", link: "/backend/docker/index" },
+  //     ],
+  //   },
+  // ],
 
   "/analysis/": [
     {

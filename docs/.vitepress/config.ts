@@ -46,7 +46,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/sunxuecong' }],
 
     footer: {
-      message: 'Released under the MIT License.',
+      message: '👮备案号: 鲁ICP备2024114331号',
       copyright: 'Copyright © 2024-present Sain Sun',
     },
 
