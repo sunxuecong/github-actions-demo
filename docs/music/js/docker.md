@@ -1,0 +1,9 @@
+- docker ps 
+- docker ps -a
+- docker run --help 
+- docker run -d -p 88:80 --name inginx nginx
+- docker exec -it  [doker ps 的id] bash
+- cd /usr/share/nginx/html
+- echo  1111111 > index.html
+- echo '<h1>Hello nginx</h1>' > index.html
+- docker run -d -p 88:80 -v /app/nginx:usr/share/nginx  --name inginx nginx

@@ -2,6 +2,18 @@ import type { DefaultTheme } from "vitepress";
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
   "/front/": [
+    // {
+    //   text: "JavaScript 基础知识",
+    //   collapsed: false,
+    //   items: [
+    //     { text: "原型与原型链详解", link: "/front/javascript/prototypeChain" },
+    //     {
+    //       text: "JavaScript手写代码汇总",
+    //       link: "/front/javascript/handwriting",
+    //     },
+    //     { text: "前端代码规范", link: "/front/javascript/specification" },
+    //   ],
+    // },
     {
       text: "JavaScript 基础知识",
       collapsed: false,
@@ -12,12 +24,6 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
           link: "/front/javascript/handwriting",
         },
         { text: "前端代码规范", link: "/front/javascript/specification" },
-      ],
-    },
-    {
-      text: "JavaScript 基础知识",
-      collapsed: false,
-      items: [
         { text: "数据类型", link: "/front/javascript/types" },
         { text: "引用类型的拷贝", link: "/front/javascript/clone" },
         { text: "类型转换", link: "/front/javascript/conversions" },
