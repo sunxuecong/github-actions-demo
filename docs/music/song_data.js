@@ -1,4 +1,4 @@
-const baseMusicUrl = 'https://sunxuecong.github.io/github-actions-demo/'
+const baseMusicUrl = 'https://www.seannote.com/'
 
 const traillet = {
   id: 1974444808,
