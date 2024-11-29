@@ -1,4 +1,4 @@
-### 1. 新建仓库
+## 1. 新建仓库
 
 ```sh
 # 在当前目录新建一个 Git 仓库
@@ -11,7 +11,7 @@ git init [project-name]
 git clone [url]
 ```
 
-###  2. 配置Git
+##  2. 配置Git
 
 ```sh
 # 查看当前的 Git 配置
@@ -36,7 +36,7 @@ git config --global --unset alias.xxx
 git config --global --unset user.xxx
 ```
 
-### 3. 向暂存区添加 / 删除文件
+## 3. 向暂存区添加 / 删除文件
 
 ```sh
 # 添加指定文件或指定目录到暂存区
@@ -52,7 +52,7 @@ git reset file1 file2
 git reset
 ```
 
-###  4. 代码提交
+##  4. 代码提交
 
 ```sh
 # 提交暂存区到仓库区
@@ -62,7 +62,7 @@ git commit -m [提交信息]
 git commit --amend -m [提交信息]
 ```
 
-### 5. 代码推送
+## 5. 代码推送
 
 ```sh
 # 将本地仓库的文件推送到远程分支
@@ -105,7 +105,7 @@ git push --force origin | git push -f origin
 git push origin --force
 ```
 
-### 6. 分支
+## 6. 分支
 
 ```sh
 # 列出所有本地分支
@@ -152,7 +152,7 @@ git push origin --delete [分支名]
 git branch -dr [remote/分支名]
 ```
 
-### 7. 存储
+## 7. 存储
 
 ```sh
 # 将所有未提交的修改（提交到暂存区）保存至堆栈中
@@ -177,11 +177,11 @@ git stash apply
 git stash clear
 ```
 
-### 8. 变基
+## 8. 变基
 
 可以看这篇链接，写的很好🔗https://juejin.cn/post/6844903546104135694#heading-9
 
-### 9. 远程仓库
+## 9. 远程仓库
 
 ```sh
 # 查看所有远程主机
@@ -197,7 +197,7 @@ git remote rm projectname
 git remote set-url origin <newurl>
 ```
 
-### 10. 标签
+## 10. 标签
 
 ```sh
 # 查看所有标签
@@ -234,7 +234,7 @@ git tag -d v0.1
 git push origin :refs/tags/<tagname>
 ```
 
-### 11. 查看信息
+## 11. 查看信息
 
 ```sh
 # 显示变更的文件
@@ -278,9 +278,9 @@ git diff --shortstat "@{0 day ago}"
 git reflog
 ```
 
-### 12. 版本切换 & 重设 & 撤销
+## 12. 版本切换 & 重设 & 撤销
 
-#### 12.1 撤销
+### 12.1 撤销
 
 ```sh
 ## 如果还没 git add file ，使用该指令进行撤销
@@ -301,7 +301,7 @@ git reset --soft HEAD^
 # 注意，这个命令仅仅是撤回commit操作，写的代码仍然保留
 ```
 
-#### 12.2 checkout 详解
+### 12.2 checkout 详解
 
 ```sh
 # 回滚到指定的 HEAD
@@ -327,7 +327,7 @@ git checkout <tag>
 
 
 
-#### 12.3 reset 详解
+### 12.3 reset 详解
 
 `git reset [--hard|soft|mixed|merge|keep] [<commit>或HEAD]`：将当前的分支重设(`reset`)到指定的 `<commit>` 或者 `HEAD` (默认，如果不显示指定 `<commit>`，默认是 `HEAD` ，即最新的一次提交)，并且根据 `[mode]` 有可能更新索引和工作目录。`mode` 的取值可以是 `hard`、`soft`、`mixed`、`merged`、`keep` 。
 
@@ -365,7 +365,7 @@ git reset --hard  <commit>
 
 - 虽然可以用 git reflog 查看本地历史，然后回复到之前的新版本代码，但是在别的电脑上是无法获取你的历史命令的，所以这种方法不安全。万一你的电脑突然坏了，这时候就无法回到未来的版本。
 
-#### 12.4 revert 详解
+### 12.4 revert 详解
 
 ```sh
 # 生成一个撤销最近的一次提交的新提交
@@ -395,7 +395,7 @@ git revert <commit_id> --no-edit
 
 
 
-### 13. 分支管理规范
+## 13. 分支管理规范
 
 - 实际开发的时候，一人一条分支(个人见解：除非是大项目，参与的开发人员很多时，可以采用 feature 分支，否则一般的项目中，一个开发者一条分支够用了）除此之外还要有一条 develop 开发分支，一条 test 测试分支，一条 release 预发布分支。
   - **develop**：开发分支，开发人员每天都需要拉取/提交最新代码的分支；
