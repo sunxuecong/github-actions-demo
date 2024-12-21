@@ -52,27 +52,35 @@ function myInstanceof(left, right) {
 （4）判断函数的返回值类型，如果是值类型，返回创建的对象。如果是引用类型，就返回这个引用类型的对象。
 
 ```js
-function objectFactory() {
-    let newObject = null;
-    let constructor = Array.prototype.shift.call(arguments);
-    let result = null;
-    // 判断参数是否是一个函数
-    if (typeof constructor !== "function") {
-        console.error("type error");
-        return;
-    }
-    // 新建一个空对象，对象的原型为构造函数的 prototype 对象
-    newObject = Object.create(constructor.prototype);
-    // 将 this 指向新建对象，并执行函数
-    result = constructor.apply(newObject, arguments);
-    // 判断返回对象
-    let flag =
-        result && (typeof result === "object" || typeof result === "function");
-    // 判断返回结果
-    return flag ? result : newObject;
+// 先确保Func是一个函数
+//1. 创建一个 obj
+//2. 将obj 的__proto__ 指向 Func 的 prototype
+//3. 将 Func 的 this 指向 obj 并且运行 Func
+// 判断Func return
+// 如果 return 的是个 引用类型 那么就返回这个 引用类型的值.
+// 如果return的 不是引用类型或者没有 return 就返回刚才创建的 obj
+
+function myNew(Func,...args) {
+  if(typeof Func !== 'function'){
+    throw new TypeError('type error')
+  }
+  const  obj = {}
+  obj.__proto__ = Function.prototype
+  let result = Func.apply(obj, args)
+  return result instanceof Object ? result : obj
 }
-// 使用方法
-objectFactory(构造函数, 初始化参数);
+// 使用方式
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+Person.prototype.say = function () {
+  console.log(this.name)
+}
+
+let p = mynew(Person, "huihui", 123)
+console.log(p) // Person {name: "huihui", age: 123}
+p.say() // huihui
 ```
 
 ## 4. 手写 Promise
